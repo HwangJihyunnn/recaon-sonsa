@@ -1,7 +1,7 @@
 /* FOOTER */
 @charset "UTF-8";
 
-#footer {/* position:absolute; */bottom: 0px;width:100%;height:240px;padding:10px 0;background-color:#393939;color:#999; font-family: 'NanumSquare';}
+#footer {position:absolute;bottom: 0px;width:100%;height:240px;padding:10px 0;background-color:#393939;color:#999; font-family: 'NanumSquare';}
 
 #footer > .inners {position:relative;width:1380px;margin:0 auto}
 
