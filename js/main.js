@@ -5,4 +5,4 @@ setInterval(() => {
   images[current].classList.remove('active');
   current = (current + 1) % images.length;
   images[current].classList.add('active');
-}, 3000); // 4초 간격
+}, 3000); // 3초 간격
