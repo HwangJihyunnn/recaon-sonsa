@@ -38,5 +38,7 @@ body
 .main-box {margin-top: 100px; }
 .main-box ul {display: inline-flex; gap: 20px; }
 .main-box ul li {width: 200px; height: 200px; background-color: rgba(0,0,0,0.5); border: 2px solid #fff;  display: flex; align-items: center; justify-content: center; }
-.main-box ul li > a {width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; }
-.main-box ul li > a > span {font-size: 48px; display: flex; align-items: center; margin-right: 10px; }
+.main-box ul li > a {width: 100%; height: 100%; display: flex; align-items: center; flex-direction: column; justify-content: center; color: #fff; text-decoration: none; vertical-align: top; }
+.main-box ul li > a > span {font-size: 48px; display: flex; align-items: center; margin-bottom: 20px; }
+
+.main-box ul li:hover {background-color: rgba(0,0,0,0.7); border: 2px solid rgb(194, 126, 81); box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease; }
