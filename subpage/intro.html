@@ -155,18 +155,29 @@
     </footer>
     <script>
       fetch("../js/history.json")
-        .then(response => response.json())
-        .then(data => {
-          const historyContainer = document.getElementById("history");
-          historyContainer.innerHTML = "";
+      .then(response => response.json())
+      .then(data => {
+        const historyContainer = document.getElementById("history");
+        historyContainer.innerHTML = "";
 
-          data.forEach(item => {
-            const div = document.createElement("div");
-            div.textContent = `${item.date} - ${item.event}`;
-            historyContainer.appendChild(div);
-          });
-        })
-        .catch(error => console.error("JSON 불러오기 오류:", error));
+        data.forEach(item => {
+          const p = document.createElement("p");
+
+          const dateSpan = document.createElement("span");
+          dateSpan.className = "history-date";
+          dateSpan.textContent = item.date;
+
+          const eventSpan = document.createElement("span");
+          eventSpan.className = "history-event";
+          eventSpan.textContent = item.event;
+
+          p.appendChild(dateSpan);
+          p.appendChild(eventSpan);
+
+          historyContainer.appendChild(p);
+        });
+      })
+      .catch(error => console.error("JSON 불러오기 오류:", error));
     </script>
     <script src="../js/main.js"></script>
   </body>
