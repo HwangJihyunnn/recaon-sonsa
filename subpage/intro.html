@@ -74,17 +74,35 @@
         <div class="banner"><h3>기업소개</h3></div>
           <div class="container">
             <h3>"리카온손해사정은 고객의 입장에서 최상의 서비스를 제공하는 손해사정법인입니다."</h3>
-            <div class="history" id="history"></div>
             <div class="com-box">
-              <ul class="company_info">
-                <li>회사명<span>리카온화재해상자동차손해사정(주)</span></li>
-                <li>손해사정등록번호<span>제 B0000167 호</span></li>
-                <li>사업자등록번호<span>106-23-30223</span></li>
-                <li>대표자<span>유상헌</span></li>
-                <li>설립일<span>2004년 9월</span></li>
-                <li>주소지<span>서울특별시 금천구 가산디지털1로 70, 807(호서대벤처타워)</span></li>
-              </ul>
-            </div>
+  <ul class="company_info">
+    <li>
+      <div class="icon">🏢</div>
+      <h4>회사명</h4>
+      <p>리카온화재해상자동차손해사정(주)</p>
+      <span class="year">2004</span>
+    </li>
+    <li>
+      <div class="icon">👤</div>
+      <h4>대표자</h4>
+      <p>유상헌</p>
+      <span class="year">현재</span>
+    </li>
+    <li>
+      <div class="icon">📅</div>
+      <h4>설립일</h4>
+      <p>2004년 9월</p>
+      <span class="year">2004</span>
+    </li>
+    <li>
+      <div class="icon">📍</div>
+      <h4>본사</h4>
+      <p>서울특별시 금천구 가산디지털1로 70, 807(호서대벤처타워)</p>
+      <span class="year">본사</span>
+    </li>
+  </ul>
+</div>
+            <div class="history" id="history"></div>
           </div>
           
     </main>
@@ -153,46 +171,7 @@
         </div>
       </div>
     </footer>
-    <script>
-        fetch("../js/history.json")
-      .then(response => response.json())
-      .then(data => {
-        const historyContainer = document.getElementById("history");
-        historyContainer.classList.add("timeline");
-        historyContainer.innerHTML = "";
-
-        data.forEach(item => {
-          const entry = document.createElement("div");
-          entry.className = "timeline-item";
-
-          entry.innerHTML = `
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">${item.date}</span>
-              <span class="timeline-event">${item.event}</span>
-            </div>
-          `;
-
-          historyContainer.appendChild(entry);
-        });
-        // 스크롤 애니메이션
-      const items = document.querySelectorAll(".timeline-item");
-
-      const revealOnScroll = () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        items.forEach(item => {
-          const itemTop = item.getBoundingClientRect().top;
-          if (itemTop < triggerBottom) {
-            item.classList.add("show");
-          }
-        });
-      };
-
-      window.addEventListener("scroll", revealOnScroll);
-      revealOnScroll(); // 처음 로드 시 체크
-    })
-      .catch(error => console.error("JSON 불러오기 오류:", error));
-    </script>
+    <script src="../js/history.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

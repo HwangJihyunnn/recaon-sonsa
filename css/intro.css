@@ -116,6 +116,58 @@ background: #000;
 
 
 
-.com-box {width: 100%; margin: 0 auto 50px; padding: 50px 0;  background:#333;}
-.company_info {display: flex; justify-content: space-between; width: 100%; margin: 0 auto; padding: 0; list-style: none; }
-.company_info li {display: flex; justify-content: space-between; flex-direction: column; gap: 30px; align-items: center; font-size: 1rem; color: #fff; font-weight: bold; }
+.com-box {
+  margin: 2rem 0;
+}
+
+.company_info {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.company_info li {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.company_info li:last-child {
+  border-right: none;
+}
+
+.company_info .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.company_info h4 {
+  font-size: 1.1rem;
+  color: #0077cc;
+  margin: 0.5rem 0;
+}
+
+.company_info p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.5rem 0 1rem;
+  line-height: 1.4;
+}
+
+.company_info .year {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #999;
+  margin-top: auto;
+  display: block;
+}

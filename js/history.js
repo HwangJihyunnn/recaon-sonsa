@@ -1,40 +1,45 @@
+ fetch("/js/history.json")
+      .then(response => response.json())
+      .then(data => {
+        const historyContainer = document.getElementById("history");
+        historyContainer.classList.add("timeline");
+        historyContainer.innerHTML = "";
 
+        data.sort((a, b) => {
+      // "YYYY.MM" 문자열을 날짜 비교 가능하게 변환
+      const dateA = new Date(a.date.replace(".", "-") + "-01");
+      const dateB = new Date(b.date.replace(".", "-") + "-01");
+      return dateB - dateA; // 내림차순
+      });
 
+        data.forEach(item => {
+          const entry = document.createElement("div");
+          entry.className = "timeline-item";
 
+          entry.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">${item.date}</span>
+              <span class="timeline-event">${item.event}</span>
+            </div>
+          `;
 
+          historyContainer.appendChild(entry);
+        });
+        // 스크롤 애니메이션
+      const items = document.querySelectorAll(".timeline-item");
 
+      const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        items.forEach(item => {
+          const itemTop = item.getBoundingClientRect().top;
+          if (itemTop < triggerBottom) {
+            item.classList.add("show");
+          }
+        });
+      };
 
- async function loadHistory() { 
-  try {
-    const response = await fetch("/js/history.json");
-    const data = await response.json();
-
-    // ✅ 최신순으로 정렬 (date가 "2000.03" 형식일 때)
-    data.sort((a, b) => b.date.localeCompare(a.date));
-
-    const historyContainer = document.getElementById("history");
-    historyContainer.innerHTML = ""; // 초기화
-
-    data.forEach(item => {
-      const p = document.createElement("p");
-
-      const dateSpan = document.createElement("span");
-      dateSpan.classList.add("history-date"); // 날짜용 클래스
-      dateSpan.textContent = item.date;
-
-      const eventSpan = document.createElement("span");
-      eventSpan.classList.add("history-event"); // 이벤트용 클래스
-      eventSpan.textContent = item.event;
-
-      p.appendChild(dateSpan);
-      p.appendChild(eventSpan);
-
-      historyContainer.appendChild(p);
-    });
-  } catch (error) {
-    console.error("연혁 로딩 실패:", error);
-  }
-}
-
-loadHistory();
-
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll(); // 처음 로드 시 체크
+    })
+      .catch(error => console.error("JSON 불러오기 오류:", error));
