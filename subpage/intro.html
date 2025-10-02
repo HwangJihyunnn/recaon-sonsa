@@ -154,27 +154,26 @@
       </div>
     </footer>
     <script>
-      fetch("../js/history.json")
+        fetch("../js/history.json")
       .then(response => response.json())
       .then(data => {
         const historyContainer = document.getElementById("history");
+        historyContainer.classList.add("timeline");
         historyContainer.innerHTML = "";
 
         data.forEach(item => {
-          const p = document.createElement("p");
+          const entry = document.createElement("div");
+          entry.className = "timeline-item";
 
-          const dateSpan = document.createElement("span");
-          dateSpan.className = "history-date";
-          dateSpan.textContent = item.date;
+          entry.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">${item.date}</span>
+              <span class="timeline-event">${item.event}</span>
+            </div>
+          `;
 
-          const eventSpan = document.createElement("span");
-          eventSpan.className = "history-event";
-          eventSpan.textContent = item.event;
-
-          p.appendChild(dateSpan);
-          p.appendChild(eventSpan);
-
-          historyContainer.appendChild(p);
+          historyContainer.appendChild(entry);
         });
       })
       .catch(error => console.error("JSON 불러오기 오류:", error));
