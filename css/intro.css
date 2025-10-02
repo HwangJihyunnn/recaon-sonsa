@@ -41,25 +41,49 @@ background: #000;
 .timeline {
   position: relative;
   margin: 2rem 0;
-  padding-left: 40px; /* 왼쪽 공간 확보 */
-  border-left: 2px solid #d0d0d0; /* 세로 라인 */
+  padding-left: 40px;
+  border-left: 2px solid #d0d0d0;
+  overflow: hidden;
+}
+
+/* 세로 라인 애니메이션 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background: rgb(194, 126, 81);
+  animation: drawLine 2s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    height: 100%;
+  }
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -10px;   /* 세로선 위에 동그라미 올리기 */
+  left: -10px;
   top: 5px;
   width: 16px;
   height: 16px;
-  background: #4a90e2;
+  background: rgb(247, 162, 105);
   border-radius: 50%;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #4a90e2;
+  box-shadow: 0 0 0 2px rgb(117, 76, 49);
+  transform: scale(0);
+  transition: transform 0.4s ease;
 }
 
 .timeline-content {
@@ -70,7 +94,7 @@ background: #000;
   display: inline-block;
   min-width: 80px;
   font-weight: bold;
-  color: #4a90e2;
+  color: #8e847d;
   margin-right: 0.5rem;
 }
 
@@ -79,6 +103,15 @@ background: #000;
   font-size: 0.95rem;
 }
 
+/* 등장 애니메이션 활성화 시 */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item.show .timeline-dot {
+  transform: scale(1);
+}
 
 
 

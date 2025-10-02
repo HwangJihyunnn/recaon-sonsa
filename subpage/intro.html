@@ -175,7 +175,22 @@
 
           historyContainer.appendChild(entry);
         });
-      })
+        // 스크롤 애니메이션
+      const items = document.querySelectorAll(".timeline-item");
+
+      const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        items.forEach(item => {
+          const itemTop = item.getBoundingClientRect().top;
+          if (itemTop < triggerBottom) {
+            item.classList.add("show");
+          }
+        });
+      };
+
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll(); // 처음 로드 시 체크
+    })
       .catch(error => console.error("JSON 불러오기 오류:", error));
     </script>
     <script src="../js/main.js"></script>
