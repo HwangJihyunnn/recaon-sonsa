@@ -1,4 +1,4 @@
- fetch("/js/history.json")
+ fetch("../js/history.json")
       .then(response => response.json())
       .then(data => {
         const historyContainer = document.getElementById("history");
