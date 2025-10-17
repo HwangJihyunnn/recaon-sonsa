@@ -1,90 +1,123 @@
-@charset "UTF-8";
-
-#header { position: fixed; top: 0; left: 50%; width: 100%; height: 92px; max-width: inherit; transform: translateX(-50%); z-index: 999; background-color: rgba(255,255,255,0.1); transition: all 300ms ease-out; color: #333; }
-#header:hover { height: 296px; background-color: rgba(1, 1, 1,0.8); }
-#header:hover ul.nav .main-menu .nav-sub { opacity: 1; height: auto; margin-top: 72px; }
-#header:hover ul.nav .main-menu .nav-sub li { margin-bottom: 20px; visibility: visible; }
-#header .logo { position: absolute; top: 7px; left: 10%;;}
-#header .logo img { height: 70px; margin-top: 6px; }
-#header .open-btn { position: absolute; top: 50%; right: 5%; width: 50px; height: 50px; transform: translateY(-50%); opacity: 0; z-index: -9; cursor: pointer; transition: all 250ms ease-out; }
-#header .open-btn span { font-size: 50px; color: #fefefe; }
-#header .open-btn span:first-child { display: block; }
-#header .open-btn span:last-child { display: none; }
-#header .open-bg { position: fixed; width: 100vw; height: 100vh; top: 0; left: 100%; background-color: rgba(1, 1, 1, .5); transition: opacity 250ms ease-out; opacity: 0; }
-#header .gnb .logo { opacity: 0; }
-#header ul.nav { position: absolute; top: 36px; right: 10%; }
-#header ul.nav .main-menu { float: left; margin: 0 0 0 80px; cursor: pointer; transition: all 250ms linear; position: relative; text-align: center;}
-#header ul.nav .main-menu:first-child { margin: 0; }
-#header ul.nav .main-menu:hover:before { content: ''; position: absolute; top: -36px; left: 50%; transform: translateX(-50%); width: 170%; height: 296px; background: rgba(244, 244, 244, .3); transition: all 200ms ease-out; } /*큰박스*/
-#header ul.nav .main-menu a { font-family: 'Mulish'; font-weight: 700; font-size: 20px; text-transform: uppercase;  position: relative; transition: color 100ms linear; }
-#header ul.nav .main-menu > a:before { content: ''; position: absolute; bottom: -36px; left: 50%; transform: translateX(-50%); height: 2px; background-color: #fefefe; opacity: 0; width: 0; transition: width 250ms ease-out; }
-#header ul.nav .main-menu:hover > a:before { opacity: 1; width: 135%; } /*pc메뉴 바*/
-#header ul.nav .main-menu .nav-sub { opacity: 0; margin-top: 0; text-align: center; height: 0; transition: opacity 400ms ease-out, height 400ms ease-out; }
-#header ul.nav .main-menu .nav-sub li { margin-bottom: 0px; visibility: hidden;}
-#header ul.nav .main-menu .nav-sub li:last-child { margin-bottom: 0px; }
-#header ul.nav .main-menu .nav-sub li a { font-family: 'Noto Sans KR'; font-size: 16px; font-weight: 400; line-height: 1.2em; text-transform: none; transition: color 150ms ease-out; }
-#header ul.nav .main-menu .nav-sub li a:hover { color: #C4CDF6 !important; }
-
-#header ul.nav .main-menu a,
-#header ul.nav .main-menu .nav-sub li a { text-decoration-line: none; color: #fefefe; }
-
-/*only fullpage*/
-#header .logo.origin { display: block; }
-#header .logo.light { display: none; }
-#header:hover .logo.origin { display: block !important; }
-#header:hover .logo.light { display: none !important; }
-body.light-mode #header .logo.origin { display: none; }
-body.light-mode #header .logo.light { display: block; }
-body.light-mode #header ul.nav .main-menu a,
-body.mixed-mode #header ul.nav .main-menu a { color: #111; }
-body.light-mode #header:hover ul.nav .main-menu a,
-body.mixed-mode #header:hover ul.nav .main-menu a { color: #fefefe; }
-body.light-mode #header .open-btn span,
-body.mixed-mode #header .open-btn span { color: #111; }
-body.light-mode #header:hover .open-btn span,
-body.mixed-mode #header:hover .open-btn span { color: #fefefe; }
-body.bg-mode #header { background-color: #4b4b4b; }
-
-/*responsive*/
-@media screen and (min-width: 1001px) and (max-width: 1520px) {
-  #wrap{max-width: 1520px;}
-  
-  #header .logo { left: 5%; }
-  #header ul.nav { right: 5%; }
-  #header ul.nav .main-menu a { font-size: 16px; }
-  #header ul.nav .main-menu .nav-sub li a { font-size: 14px; }
+/* ======================== 1. 기본 헤더 및 GNB 설정 ======================== */
+#header {
+    position: fixed; /* 헤더를 화면 상단에 고정 (투명/블러 효과를 위해 자주 사용) */
+    width: 100%;
+    height: 80px; 
+    z-index: 100;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 30px; 
+    box-sizing: border-box; 
+    /* 블러 효과를 위한 배경 설정 (필수) */
+    background-color: rgba(255, 255, 255, 0.1); /* 반투명 흰색 배경 */
+    /* 투명 블러 효과 적용 (크롬, 사파리 등) */
+    backdrop-filter: blur(5px); 
+    /* 사파리 구형 버전 지원 */
+    -webkit-backdrop-filter: blur(5px); 
     
+    /* 배경/블러 효과 전환을 위한 transition (선택 사항) */
+    transition: background-color 0.3s ease-in-out;
 }
+
+.logo {
+    /* 로고 컨테이너의 크기를 제한 */
+    height: 100%; /* 헤더 높이에 맞춤 */
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    /* 이미지 자체의 크기 조정 */
+    height: 35px; /* 로고 이미지의 높이를 35px로 조정 (원하는 크기로 변경 가능) */
+    width: auto;
+}
+
+.gnb {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    list-style: none;;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav > li {
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* 서브메뉴 li에 마우스 오버 시 z-index를 높여 배경 위에 보이게 함 */
+    z-index: 101; 
+}
+
+/* ======================== 2. 서브메뉴 및 배경 설정 ======================== */
+
+/* 서브메뉴 숨기기 */
+.nav-sub {
+    list-style: none;
+    position: absolute;
+    top: 80px; /* 헤더 높이 아래에 배치 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding: 10px 0;
     
-@media screen and (min-width: 0px) and (max-width: 1000px) {
-  #wrap{max-width: 1000px;}
+    /* 초기에는 숨김 */
+    opacity: 0; 
+    visibility: hidden; 
+    max-height: 0; /* 높이 0으로 설정하여 오버플로우 막기 */
+    overflow: hidden;
 
-  #header ul.nav .main-menu a { font-size: 16px; }
-  #header ul.nav .main-menu .nav-sub li a { font-size: 14px; }
-
-  #header { height: 60px; }
-  #header:hover { height: 60px; }
-  #header:hover ul.nav .main-menu .nav-sub { opacity: 0; display: none; }
-  #header .logo { left: 5%; }
-  #header .logo img { height: 50px; margin-top: 0; }
-  #header .open-btn { opacity: 1; z-index: 998; }
-  html.open-menu #header .open-btn { right: calc(5% + 220px); }
-  html.open-menu #header .open-btn span:first-child { display: none; }
-  html.open-menu #header .open-btn span:last-child { display: block; }
-  html.open-menu #header .open-bg { opacity: 1; left: 0; }
-  #header .gnb { position: fixed; top: 0; right: 0; width: 240px; height: 100vh; background: #111; transform: translateX(240px); transition: all 250ms ease-out; opacity: 0; }
-  html.open-menu #header .gnb { transform: translateX(0); opacity: 1; }
-  #header .gnb .logo { top: 5%; left: 50%; transform: translateX(-50%); display: block; opacity: 1; }
-  #header .gnb .logo:before { content: ''; position: absolute; top: 141px; left: 50%; width: 160%; height: 2px; background: #fefefe; transform: translateX(-50%); z-index: 9; }
-  #header .gnb .logo img { height: 100px; }
-  #header ul.nav { top: 232px; }
-  #header ul.nav .main-menu { margin: 0 0 40px 40px !important; text-align: left;}
-  #header ul.nav .main-menu:hover:before { display: none; } /*큰박스*/
-  #header ul.nav .main-menu > a:before { bottom: 6px; left: auto; right: -30px; width: 8px; height: 8px; opacity: 1; clip-path: polygon(100% 0, 0 0, 50% 100%); }
-  #header ul.nav .main-menu:hover > a:before { width: 8px; }
-  #header ul.nav .main-menu.open > a:before { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
-  #header:hover ul.nav .main-menu .nav-sub { margin-top: 30px; text-align: left; }
-  #header ul.nav .main-menu.open .nav-sub { opacity: 1; display: block; }
-  #header ul.nav .main-menu .nav-sub li { margin-bottom: 30px; }
+    /* 부드러운 전환 효과 */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, max-height 0s 0.3s;
 }
-/*responsive end*/
+
+.nav-sub li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* 마우스 오버 시 늘어날 배경 영역 */
+.gnb-bg {
+    position: absolute;
+    top: 80px; /* 헤더 높이 아래에 배치 */
+    left: 0;
+    width: 100%;
+    height: 0; /* 초기 높이 0 (숨김) */
+    background-color: white;
+    border-top: 1px solid #ccc; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 99; /* 메인 메뉴(100)보다 낮고, 서브메뉴(101)보다 낮음 */
+    
+    /* 높이 애니메이션 설정 */
+    transition: height 0.3s ease-in-out;
+}
+
+/* ======================== 3. JavaScript로 제어될 클래스 ======================== */
+
+/* JS로 header에 .active 클래스 추가 시 */
+#header.active .gnb-bg {
+    /* 이 높이는 JS에서 계산하여 인라인 스타일 또는 변수로 설정하는 것이 가장 정확합니다. 
+       일단 예시로 높이를 설정합니다. (JS에서 동적으로 설정할 것입니다) */
+    /* height: 200px; */ 
+}
+
+/* header에 .active 클래스 추가 시 서브메뉴 보이기 */
+#header.active .nav-sub {
+    opacity: 1; 
+    visibility: visible;
+    max-height: 500px; /* 충분히 큰 값으로 설정하여 내용이 보이게 함 */
+    /* max-height와 visibility 전환 시간 재설정 */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0s, max-height 0s 0s;
+}

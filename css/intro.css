@@ -1,106 +1,323 @@
 @charset "utf-8";
 
-body 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
+
+/* body 
 {font-family: 'Noto Sans KR', sans-serif; 
  margin: 0; padding: 0; background-color: #fefefe; color: #333; 
  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+ */
 
 
-.banner {flex: 1; background: url(../img/intro1.jpg) no-repeat center center; background-size: cover; width: 100%; height: 250px; overflow: hidden; position: relative; z-index: 1; }
-.banner > h3 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; color: #fff; }
-
-.container {width: 1000px; margin: 50px auto;}
-.container > h3 {font-size: 1.5rem; font-weight: 400; margin-bottom: 50px; text-align: center; }
-
-
-/* 회사업적 */
-.com-box {
-  margin: 2rem 0;
+/* ---------- 페이지 헤더 ---------- */
+.page-header {
+  background: #f5f2ed; /* 연한 아이보리톤 */
+  border-bottom: 1px solid #e3d8c8;
+  padding: 60px 0;
+  text-align: center;
 }
 
+.page-header .inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-header h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #3c2f26; /* 진한 브라운 */
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.page-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #b99a74, #8c6b4a); /* 브라운 계열 그라데이션 */
+  border-radius: 2px;
+}
+
+.page-header p {
+  font-size: 1rem;
+  color: #7a6550; /* 서브텍스트 톤 다운 브라운 */
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* ---------- 컨테이너 ---------- */
+.container {
+  width: 1000px;
+  margin: 60px auto;
+  padding: 60px 50px;
+  background: #fdfcfb;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e6dfd5;
+  text-align: center;
+}
+
+.container > h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #3c2f26;
+  margin-bottom: 60px;
+  line-height: 1.7;
+  position: relative;
+}
+
+.container > h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #b99a74, #8c6b4a);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* ---------- 카드 박스 ---------- */
+.com-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 40px 30px;
+  border: 1px solid #e8e0d8;
+}
+
+/* ---------- 회사 정보 카드 ---------- */
 .company_info {
-  display: flex;
-  justify-content: space-between;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
   padding: 0;
   margin: 0;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #fff;
 }
 
 .company_info li {
-  flex: 1;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  border-right: 1px solid #ddd;
+  flex: 1 1 calc(25% - 20px); /* 한 줄에 4개 균등 */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(145deg, #faf7f3, #f5f1ec);
+  border: 1px solid #e3dbd2;
+  border-radius: 14px;
+  padding: 30px 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-.company_info li:last-child {
-  border-right: none;
+.company_info li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(80, 60, 40, 0.15);
+  border-color: #d8c9b9;
 }
 
-.company_info .icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* ---------- 아이콘 ---------- */
+.icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 34px;
+  color: #b99a74;
+  background: #f4ede7;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
+.icon:hover {
+  background: #b99a74;
+  color: #fff;
+}
+
+/* ---------- 텍스트 ---------- */
 .company_info h4 {
+  font-family: 'Noto Serif KR', serif;
   font-size: 1.1rem;
-  color: #0077cc;
-  margin: 0.5rem 0;
+  color: #3b2f27;
+  margin-bottom: 6px;
+  text-align: center;
 }
 
 .company_info p {
   font-size: 0.95rem;
-  color: #333;
-  margin: 0.5rem 0 1rem;
-  line-height: 1.4;
+  color: #574b43;
+  text-align: center;
+  margin: 0;
 }
 
+/* ---------- 연도 라벨 ---------- */
 .company_info .year {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #999;
-  margin-top: auto;
-  display: block;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: linear-gradient(90deg, #b99a74, #8c6b4a);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
 }
 
 
 
 
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 2rem 0;
+}
+
+/* 중앙 라인 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #cbb79a 0%, #a69075 100%);
+  border-radius: 3px;
+  opacity: 0.5;
+}
+
+/* 아이템 기본 구조 */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 왼쪽 / 오른쪽 배치 */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+/* 카드 스타일 */
+.timeline-content {
+  width: 350px;
+  display: flex;
+  align-items: baseline;
+  background: #fffdfa;
+  border: 1px solid rgba(200, 185, 160, 0.4);
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(90, 70, 50, 0.08);
+  max-width: 360px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.timeline-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(80, 60, 40, 0.15);
+}
+
+/* 말풍선 꼬리 */
+.timeline-item:nth-child(odd) .timeline-content::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: -14px;
+  width: 12px;
+  height: 12px;
+  background: #fffdfa;
+  border-top: 1px solid rgba(200, 185, 160, 0.4);
+  border-right: 1px solid rgba(200, 185, 160, 0.4);
+  transform: rotate(45deg);
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: -14px;
+  width: 12px;
+  height: 12px;
+  background: #fffdfa;
+  border-top: 1px solid rgba(200, 185, 160, 0.4);
+  border-left: 1px solid rgba(200, 185, 160, 0.4);
+  transform: rotate(45deg);
+}
+
+/* 날짜 */
+.timeline-date {
+  display: inline-block;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to right, #b99a74, #d9c1a1);
+  border-radius: 12px;
+  padding: 4px 12px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.3px;
+}
+
+/* 이벤트 내용 */
+.timeline-event {
+  font-size: 1rem;
+  color: #3b2f27;
+  line-height: 1.7;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
 
 
+.icon.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 48px;
+}
 
+.icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 32px;
+  color: #7a5c4d; /* 브라운 포인트 */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-
-.timeline { position: relative; max-width: 900px; margin: 5rem auto; padding: 2rem 0; } 
-.timeline::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: linear-gradient(to bottom, #d0ddff 0%, #a0b8ff 100%); border-radius: 3px; opacity: 0.6; } 
-/* 아이템 기본 구조 */ 
-.timeline-item { position: relative; width: 50%; padding: 1.5rem 2rem; box-sizing: border-box; opacity: 0; transform: translateY(40px); transition: all 0.6s ease; }
- .timeline-item.show { opacity: 1; transform: translateY(0); } 
-
- /* 왼쪽 / 오른쪽 배치 */ .
- .timeline-item:nth-child(odd) { left: 0; text-align: right; } 
- .timeline-item:nth-child(even) { left: 50%; text-align: left; }
-
- /* 카드 스타일 */ 
- .timeline-content {width: 350px; display: flex; align-items: baseline; background: #ffffff; border: 1px solid rgba(180, 200, 255, 0.3); padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(120, 140, 200, 0.12); max-width: 360px; transition: transform 0.3s ease, box-shadow 0.3s ease; backdrop-filter: blur(4px);  }
-  .timeline-content:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(90, 120, 200, 0.2); }
-
-   /* 말풍선 꼬리 느낌 */ 
-  .timeline-item:nth-child(odd) 
-  .timeline-content::after { content: ""; position: absolute; top: 28px; right: -14px; width: 12px; height: 12px; background: #ffffff; border-top: 1px solid rgba(180, 200, 255, 0.3); border-right: 1px solid rgba(180, 200, 255, 0.3); transform: rotate(45deg); } 
-  .timeline-item:nth-child(even) 
-  .timeline-content::after { content: ""; position: absolute; top: 28px; left: -14px; width: 12px; height: 12px; background: #ffffff; border-top: 1px solid rgba(180, 200, 255, 0.3); border-left: 1px solid rgba(180, 200, 255, 0.3); transform: rotate(45deg); } 
-
-  /* 날짜 */ 
-  .timeline-date { display: inline-block; font-weight: 700; color: #fff; background: linear-gradient(to right, #6a8bff, #90a7ff); border-radius: 12px; padding: 4px 12px; margin-right: 10px; font-size: 0.9rem; margin-bottom: 0.6rem; letter-spacing: 0.3px; } 
-  
-  /* 이벤트 내용 */ 
-  .timeline-event { font-size: 1rem; color: #333; line-height: 1.7; }
+  margin: 0 auto 10px;
+  transition: all 0.3s ease;
+  line-height: 0; /* 아이콘 세로 중심 딱 맞추기 */
+}
