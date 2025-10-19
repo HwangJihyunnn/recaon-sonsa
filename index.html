@@ -32,39 +32,19 @@
   </head>
   <body>
      <header id="header">
-      <a class="logo" href="./../index.html">
-          <img src="../img/h_logo.png" alt="로고">
-      </a>
-      <div class="menu-btn">
-          <span class="material-symbols-outlined">menu</span>
-      </div>
-      <nav class="gnb">
-          <ul class="nav">
-              <li><a href="./subpage/intro.html">기업소개</a></li>
-              <li>
-                  <a href="javascript:;">손해사정</a>
-                  <ul class="nav-sub">
-                      <li><a href="">손해사정이란?</a></li>
-                      <li><a href="">주요 조사 업무</a></li>
-                      <li><a href="">업무 절차</a></li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="javascript:;">고객사</a>
-                  <ul class="nav-sub">
-                      <li><a href="">고객사</a></li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="javascript:;">문의</a>
-                  <ul class="nav-sub">
-                      <li><a href="">문의하기</a></li>
-                  </ul>
-              </li>
+      <div class="header-inner">
+        <h1 class="logo"><a href="#">리카온손해사정</a></h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">기업소개</a></li>
+            <li><a href="#">손해사정</a></li>
+            <li><a href="#">파트너사</a></li>
+            <li><a href="#">문의하기</a></li>
           </ul>
-      </nav>
-      <div class="gnb-bg"></div>
+        </nav>
+      </div>
     </header>
+
     <main>
         <div class="main-img">
             <img src="./img/main1.jpg" alt="메인이미지" class="active">
@@ -73,7 +53,7 @@
             <img src="./img/main4.jpg" alt="메인이미지">
         </div>
         <div class="out-text">
-            <h3>공명정대한 손해감정 <span>리카온손해사정</span>은 <br>국내 최고의 손해감정기관으로 고객의 입장에서 최상의 서비스를 제공합니다. </h3>
+            <h3>공명정대한 손해감정 <span>리카온손해사정</span>은 국내 최고의 손해감정기관으로 고객의 입장에서 최상의 서비스를 제공합니다. </h3>
             <div class="main-box">
             <ul>
                 <li ><a href="#"><span class="material-symbols-outlined">apartment</span>회사소개</a></li>
@@ -84,71 +64,53 @@
         </div>
         
     </main>
-    <footer id="footer" class="main">
-      <div class="inners">
-        <div class="row">
-          <div class="col-12 col-md-4 logo">
-            <p><a href="tel:02-757-9551">대표전화번호 : 02-757-9551</a></p>
-            <p>평일 09:00 ~ 17:00 (주말 &amp; 공휴일 제외)</p>
-          </div>
-          <div class="col-12 col-md-4 widget_area">
-            <ul class="add">
-              <li>
-                <a href="/html/sub01_1.html">
-                  <b>기업소개</b>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:openAgreement()">
-                  <b>손해사정</b>
-                  <span class="bar"></span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:openPrivacy();">
-                  <b>서비스</b>
-                  <span class="bar"></span>
-                </a>
-              </li>
-              <li>
-                <a href="/html/sub06_1.html">
-                  <b>문의하기</b>
-                  <span class="bar"></span>
-                </a>
-              </li>
-              <li>
-                <b>&nbsp;</b>
-              </li>
-            </ul>
-          </div>
-          <!-- <div class="col-4 sns_area">
-            <a href="#_" target="_blank" class="sns1">
-              <span class="blind"></span>
-            </a>
-            <a href="#_" class="sns2">
-              <span class="blind"></span>
-            </a>
-            <a href="#_" class="sns3">
-              <span class="blind"></span>
-            </a>
-          </div> -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col footer-brand">
+          <h3 class="brand-title">리카온손해사정</h3>
+          <p class="brand-sub">신뢰와 책임으로 보답하는 손해사정 전문회사</p>
         </div>
-        <div class="row row2">
-          <div class="corp_area">
-            <ul class="add add2">
-              <li>리카온화재해상자동차손해사정(주)</li>
-              <li>서울특별시 금천구 가산디지털1로 70, 807(호서대벤처타워) </li>
-              <li>사업자번호 : 106-86-30223</li>
-            </ul>
-            <ul class="add add3">
-              <li>대표전화 : 02-757-9551</li>
-              <li>FAX : 02-757-9554</li>
-            </ul>
-            <p id="copy">Copyright 2025. 리카온손해사정 All rights reserved.</p>
+
+        <div class="footer-col footer-links">
+          <h4>회사</h4>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">업무안내</a></li>
+            <li><a href="#">연혁</a></li>
+            <li><a href="#">공지사항</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h4>연락처</h4>
+          <p>대표전화: <b>02-757-9551</b></p>
+          <p>이메일: <a href="mailto:info@recaon.co.kr">info@recaon.co.kr</a></p>
+          <p>서울특별시 중구 을지로 100</p>
+        </div>
+
+        <div class="footer-col footer-sns">
+          <h4>SNS</h4>
+          <div class="sns-row">
+            <a href="#" aria-label="instagram" class="sns-btn sns-inst"></a>
+            <a href="#" aria-label="facebook" class="sns-btn sns-fb"></a>
+            <a href="#" aria-label="blog" class="sns-btn sns-blog"></a>
           </div>
         </div>
       </div>
+      <div class="footer-bottom">
+        <div class="bottom-inner">
+          <p>© 2025 리카온손해사정. All Rights Reserved.</p>
+          <nav class="bottom-links">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">사이트맵</a>
+          </nav>
+        </div>
+      </div>
     </footer>
+
+
+
     <script src="./js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

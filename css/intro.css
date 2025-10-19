@@ -90,6 +90,14 @@
   border: 1px solid #e8e0d8;
 }
 
+.container > h4 {
+  padding:112px 0 0 0 ;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.8rem;
+  color: #3b2f27;
+  margin-bottom: 15px;
+}
+
 /* ---------- 회사 정보 카드 ---------- */
 .company_info {
   list-style: none;
@@ -121,36 +129,17 @@
   border-color: #d8c9b9;
 }
 
-/* ---------- 아이콘 ---------- */
-.icon {
-  font-family: 'Material Symbols Outlined';
-  font-size: 34px;
-  color: #b99a74;
-  background: #f4ede7;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
-  flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
 
-.icon:hover {
-  background: #b99a74;
-  color: #fff;
-}
 
 /* ---------- 텍스트 ---------- */
 .company_info h4 {
   font-family: 'Noto Serif KR', serif;
   font-size: 1.1rem;
   color: #3b2f27;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   text-align: center;
+  
+
 }
 
 .company_info p {
@@ -274,8 +263,7 @@
 .timeline-date {
   display: inline-block;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(to right, #b99a74, #d9c1a1);
+  color: #b99a74;
   border-radius: 12px;
   padding: 4px 12px;
   margin-right: 10px;
@@ -283,6 +271,9 @@
   margin-bottom: 0.6rem;
   letter-spacing: 0.3px;
 }
+
+  
+.timeline-date:hover {background: linear-gradient(to right, #b99a74, #d9c1a1); color: #fff;}
 
 /* 이벤트 내용 */
 .timeline-event {
@@ -303,19 +294,22 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .icon {
   font-family: 'Material Symbols Outlined';
   font-size: 32px;
-  color: #7a5c4d; /* 브라운 포인트 */
+  color: #fff; /* 브라운 포인트 */
   width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background: #b99a74; */
+  background: linear-gradient(to right, #b99a74, #d9c1a1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
   margin: 0 auto 10px;
   transition: all 0.3s ease;

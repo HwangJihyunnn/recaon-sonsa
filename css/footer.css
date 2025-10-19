@@ -1,60 +1,155 @@
-/* FOOTER */
-@charset "UTF-8";
+/* footer.css - 브라운 메인 + 골드/딥블루 포인트 */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
 
-#footer {position:absolute;width:100%;height:240px;padding:10px 0;background-color:#393939;color:#999; font-family: 'NanumSquare';}
+.site-footer {
+  background: linear-gradient(180deg, #3b2f27 0%, #342a23 100%); /* 진한 브라운 그라데이션 */
+  color: #f2e9df; /* 연한 아이보리 텍스트 */
+  padding: 48px 16px 20px;
+  font-family: 'Pretendard', 'Noto Serif KR', sans-serif;
+  box-sizing: border-box;
+}
 
-#footer.main {position:relative;bottom:0px;}
-#footer > .inners {position:relative;width:1380px;margin:0 auto}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
 
-#footer .row {position:relative}
-#footer .row.row2 {margin:35px 0 0;padding:10px 0 0;border:1px solid #4b4b4b;border-width:1px 0 0}
+/* 브랜드 컬럼 */
+.footer-brand .brand-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.6rem;
+  color: #f7efe6;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
 
-#footer .inners .logo {display:inline-block;position:relative;top:10px;left: 10px;vertical-align: middle;}
-#footer .inners .logo span {font-size: 27px; font-weight: 800; color: #4ac6ff;}
-#footer .inners .logo p {margin: 0; font-size: 14px; color: #fff;}
+.footer-brand .brand-sub {
+  color: #e7dbcf;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
-#footer .inners .widget_area {display:inline-block;position:relative;top: 20px;left: 40px;font-size:0.875rem;font-weight:500;color:#6e6e6e}
-#footer .inners .widget_area ul.add {position:relative;padding:0 0 10px}
-#footer .inners .widget_area ul.add li {display:inline;position:relative;padding:0 10px;letter-spacing:-0.5px}
-#footer .inners .widget_area ul.add li:first-child {padding:0 10px 0 0}
-#footer .inners .widget_area ul.add li .bar {position:absolute;left:-2px;top:50%;height:12px;width:1px;margin-top:-5px;background-color:#fff}
-#footer .inners .widget_area ul.add li a {font-size:14px;color:#d3d3d3}
-#footer .inners .widget_area ul.add li a b {font-weight:700}
+/* 링크 컬럼 */
+.footer-col h4 {
+  font-size: 1rem;
+  color: #f7efe6;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
 
-#footer .inners .sns_area {display:inline-block;position:absolute;top:30px;right:0}
-#footer .inners .sns_area a.sns1 {background-image:url('../../images/main/sns1.png')}
-#footer .inners .sns_area a.sns2 {background-image:url('../../images/main/sns2.png')}
-#footer .inners .sns_area a.sns3 {background-image:url('../../images/main/sns3.png')}
-#footer .inners .sns_area a.sns4 {background-image:url('../../images/main/sns4.png')}
-#footer .inners .sns_area a.sns5 {background-image:url('../../images/main/sns5.png')}
-#footer .inners .sns_area a.sns6 {background-image:url('../../images/main/sns6.png')}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-#footer .inners .sns_area a {display:inline-block;overflow:hidden;width:3rem;height:2.5rem;background:50% 50% no-repeat;transition:opacity 0.2s}
-#footer .inners .sns_area a:hover {opacity:0.6}
+.footer-links li {
+  margin-bottom: 8px;
+}
 
-#footer .inners .corp_area {display:inline-block;position:relative;top:20px;left:0;font-size:0.875rem;font-weight:500;color:#6e6e6e}
-#footer .inners .corp_area ul.add {position:relative;padding:0 0 2px}
-#footer .inners .corp_area ul.add li {display:inline;position:relative;padding:0 10px;letter-spacing:-0.5px}
-#footer .inners .corp_area ul.add li:first-child {padding:0 10px 0 0}
-#footer .inners .corp_area ul.add li .bar {position:absolute;left:-2px;top:50%;height:12px;width:1px;margin-top:-5px;background-color:#3d3d3d}
-#footer .inners .corp_area ul.add li a {font-size:14px;color:#d3d3d3}
+.footer-links a {
+  color: #eadfce;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.22s ease, transform 0.18s ease;
+}
 
-#footer .inners #copy {position:relative;top:5px;left:0;font-size:0.875rem;font-weight:500;color:#6e6e6e}
+.footer-links a:hover {
+  color: #ffd9a6; /* 골드 계열 하이라이트 */
+  transform: translateX(4px);
+}
 
-#footer .inners .family.f_first {position:absolute;top:43px;right:370px}
-#footer .inners .family {position:absolute;top:43px;right:170px}
+/* 연락처 */
+.footer-contact p {
+  margin: 6px 0;
+  color: #eadfce;
+  font-size: 0.95rem;
+}
 
+.footer-contact a {
+  color: #cfd1d0;
+  text-decoration: underline dotted;
+}
 
-.footer {background-color: #333333;	}
-.footer .sitemap {position: relative; margin: 0 auto; width: 1280px; overflow: hidden; padding: 20px 0;}
-	.sitemap dl{float:left; width:16%;}
-	.sitemap dt{font-size:18px; padding:0 0 10px 0;}
-	.sitemap dt a{display:block; color:#fff; letter-spacing:0.2pt;}
-	.sitemap dd{ margin: 0;}
-	.sitemap dd.privacy {padding-top:20px;}
-	.sitemap dd a{position:relative; display:inline-block; color:rgba(255,255,255,.5); font-size:0.95em; padding:3px 0; transition: all 0.3s;}
-	.sitemap dd.privacy a{color:#fff}
-	.sitemap dd.privacy a:after{width:100%;}
-	.sitemap dd a:after{position:absolute; display:block; content:""; bottom:4px; overflow:hidden; height:1px; background:#fff; width:0; transition: all 0.3s;}
-	.sitemap dd a:hover{color:#fff; transition: all 0.3s;}
-	.sitemap dd a:hover:after{width:100%; transition: all 0.3s;}
+/* SNS - 동그랗고 심플한 아이콘 버튼 (이미지 또는 background 사용) */
+.sns-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 기본 SNS 버튼 (아이콘 대신 배경 이미지 또는 컬러 사용 가능) */
+.sns-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+/* 예시: 색상 포인트 및 hover */
+.sns-inst { background-image: url('/images/icons/inst.svg'); }
+.sns-fb   { background-image: url('/images/icons/fb.svg'); }
+.sns-blog { background-image: url('/images/icons/blog.svg'); }
+
+/* hover일 때 포인트 컬러(딥 블루 계열 라이트닝 + 골드 글로우) */
+.sns-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(50,40,30,0.28);
+  background-color: rgba(255,217,166,0.08);
+  border-color: rgba(255,217,166,0.12);
+}
+
+/* footer bottom */
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 18px;
+}
+
+.bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+/* small links in bottom */
+.bottom-inner p {
+  font-size: 0.88rem;
+  color: #d9cfc6;
+}
+
+.bottom-links a {
+  margin-left: 12px;
+  font-size: 0.88rem;
+  color: #d9cfc6;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.bottom-links a:hover {
+  color: #ffd9a6; /* 골드 포인트 */
+}
+
+/* responsive */
+@media (max-width: 720px) {
+  .bottom-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
