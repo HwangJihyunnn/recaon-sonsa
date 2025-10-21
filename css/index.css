@@ -46,3 +46,62 @@ body {
 .main-box ul li > a > span {font-size: 48px; display: flex; align-items: center; margin-bottom: 20px; }
 
 .main-box ul li:hover {background-color: rgba(0,0,0,0.7); border: 2px solid rgb(194, 126, 81); box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease; }
+
+
+
+
+/* =========================
+   모바일 반응형 (max-width: 768px)
+========================= */
+@media (max-width: 768px) {
+
+  .out-text {
+    width: 90%;
+    top: 45%;
+    transform: translate(-50%, -45%);
+  }
+
+  .out-text h3 {
+    margin-top: 150px;
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+
+  .out-text h3 > span {
+    display: none;
+    font-size: 28px;
+    margin-top: 10px;
+  }
+
+  .main-box {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .main-box ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-box ul li {
+    /* width: 80%; */
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+
+  .main-box ul li > a > span {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .main-box ul li > a {
+    font-size: 14px;
+  }
+
+
+
+  .main-img img {
+    object-position: center;
+  }
+}

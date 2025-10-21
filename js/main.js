@@ -20,3 +20,20 @@ setInterval(() => {
       header.classList.remove('scrolled');
     }
   });
+
+
+
+  const menuToggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("navMenu");
+  const closeBtn = document.getElementById("closeBtn");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.add("active");
+    menuToggle.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    nav.classList.remove("active");
+    menuToggle.classList.remove("active");
+  });
+
