@@ -316,3 +316,123 @@
   transition: all 0.3s ease;
   line-height: 0; /* 아이콘 세로 중심 딱 맞추기 */
 }
+
+
+/* =========================
+   모바일 반응형 (max-width: 768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* 페이지 헤더 */
+  .page-header {
+    padding: 40px 0;
+    margin-top: 10px;
+  }
+
+  .page-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0 20px;
+  }
+
+  /* 컨테이너 */
+  .container {
+    width: 95%;
+    margin: 40px auto;
+    padding: 40px 20px;
+    border-radius: 14px;
+  }
+
+  .container > h3 {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .container > h3::after {
+    width: 50px;
+    height: 2px;
+  }
+
+  /* 회사 정보 박스 */
+  .com-box {
+    padding: 30px 18px;
+  }
+
+  .company_info {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .company_info li {
+    flex: 1 1 100%;
+    padding: 24px 18px;
+  }
+
+  .company_info h4 {
+    font-size: 1rem;
+  }
+
+  .company_info p {
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  /* HISTORY 섹션 */
+  .container > h4 {
+    padding-top: 60px;
+    font-size: 1.4rem;
+  }
+
+  /* 타임라인 */
+  .timeline {
+    margin: 3rem auto;
+    padding: 1rem 0;
+  }
+
+  .timeline::before {
+    left: 8px; /* 왼쪽으로 이동 */
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding: 1rem 1.5rem 1rem 2.2rem;
+    text-align: left;
+  }
+
+  .timeline-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 1.2rem;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content::after,
+  .timeline-item:nth-child(even) .timeline-content::after {
+    left: -10px;
+    right: auto;
+    top: 20px;
+    transform: rotate(45deg);
+  }
+
+  .timeline-date {
+    font-size: 0.85rem;
+    padding: 3px 10px;
+  }
+
+  .timeline-event {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}

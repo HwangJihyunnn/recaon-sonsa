@@ -80,6 +80,7 @@ body {
   height: 2px;
   background: linear-gradient(90deg, #b99a74, #8c6b4a);
   border-radius: 2px;
+
   transition: width 0.3s ease;
 }
 
@@ -126,8 +127,8 @@ body {
 /* 반응형 */
 @media (max-width: 900px) {
   .header-inner {
-    flex-direction: column;
-    gap: 10px;
+    /* flex-direction: column; */
+    /* gap: 10px; */
   }
   .nav ul {
     gap: 24px;
