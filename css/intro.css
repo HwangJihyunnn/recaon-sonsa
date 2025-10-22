@@ -317,6 +317,101 @@
   line-height: 0; /* 아이콘 세로 중심 딱 맞추기 */
 }
 
+#location {
+  background: #f9f7f4;
+  padding: 100px 0;
+  color: #3b2f27;
+}
+
+.location-inner {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 0 40px;
+  font-family: 'Noto Sans KR', sans-serif !important;
+
+}
+
+/* 왼쪽 정보 영역 */
+.location-info {
+  flex: 1;
+}
+
+.location-info h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #3b2f27;
+  border-left: 5px solid #b99a74;
+  padding-left: 15px;
+}
+
+.location-info .address {
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  margin-bottom: 30px;
+  color: #5a4639;
+}
+
+.location-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 25px 0 10px;
+  color: #8c6b4a;
+}
+
+.location-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.location-info ul li {
+  line-height: 1.7em;
+  font-size: 1rem;
+  color: #4b3b31;
+}
+
+.location-info .bus-list li {
+  margin-left: 15px;
+  font-size: 0.95rem;
+  color: #665446;
+}
+
+
+
+.nearby p {
+  margin-top: 5px;
+  line-height: 1.7em;
+  color: #574739;
+}
+
+/* 오른쪽 지도 영역 */
+.location-map {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-map img,
+.location-map iframe {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
 
 /* =========================
    모바일 반응형 (max-width: 768px)
@@ -434,5 +529,26 @@
   .timeline-event {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+}
+
+
+
+
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .location-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .location-map img,
+  .location-map iframe {
+    height: 300px;
+  }
+
+  .location-info h2 {
+    font-size: 1.6rem;
   }
 }

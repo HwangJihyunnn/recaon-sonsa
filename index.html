@@ -31,27 +31,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
-     <header id="header">
-      <div class="header-inner">
-        <h1 class="logo"><a href="../index.html">리카온손해사정</a></h1>
+    <header id="header">
+    <div class="header-inner">
+      <h1 class="logo"><a href="../index.html"><img src="./img/h_logo.png" alt="리카온손해사정"></a></h1>
 
-          <!-- 모바일 메뉴 버튼 -->
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <!-- 모바일 메뉴 버튼 -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-        <nav class="nav" id="navMenu">
-          <button class="close-btn" id="closeBtn">&times;</button>
-          <ul>
-            <li><a href="./subpage/intro.html">기업소개</a></li>
-            <li><a href="#">손해사정</a></li>
-            <li><a href="#">파트너사</a></li>
-            <li><a href="#">문의하기</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="nav" id="navMenu">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <ul>
+          <li><a href="./subpage/intro.html">기업소개</a></li>
+          <li><a href="#">손해사정</a></li>
+          <li><a href="#">파트너사</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </nav>
+    </div>
     </header>
 
    <main>
@@ -75,7 +75,7 @@
       </ul>
     </div>
   </div>
-</main>
+  </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
@@ -87,7 +87,7 @@
         <div class="footer-col footer-links">
           <h4>회사</h4>
           <ul>
-            <li><a href="./subpage/intro.html">회사소개</a></li>
+            <li><a href="intro.html">회사소개</a></li>
             <li><a href="#">업무안내</a></li>
             <li><a href="#">연혁</a></li>
             <li><a href="#">공지사항</a></li>
@@ -101,13 +101,15 @@
           <p>서울특별시 금천구 가산디지털1로 70, 806호(호서대벤처타운)</p>
         </div>
 
-        <div class="footer-col footer-sns">
-          <h4>SNS</h4>
-          <div class="sns-row">
-            <a href="#" aria-label="instagram" class="sns-btn sns-inst"></a>
-            <a href="#" aria-label="facebook" class="sns-btn sns-fb"></a>
-            <a href="#" aria-label="blog" class="sns-btn sns-blog"></a>
-          </div>
+        <div class="footer-family">
+          <form action="#" method="get" onChange="openFamilySite(this)">
+            <label for="family-site">패밀리사이트</label>
+            <select id="family-site" name="family-site" onchange="if(this.value) window.open(this.value, '_blank'); this.selectedIndex=0;">
+              <option value="">- - - - -바로가기- - - - -</option>
+              <option value="https://www.recaon.com">(주)리카온</option>
+              <option value="https://kcmpe.com/">한국시세평가원</option>
+            </select>
+          </form>
         </div>
       </div>
       <div class="footer-bottom">

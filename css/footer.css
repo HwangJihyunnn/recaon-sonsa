@@ -28,6 +28,10 @@
   margin-bottom: 8px;
   letter-spacing: 0.4px;
 }
+.footer-brand .brand-title img {
+  max-width: 160px;
+  height: auto;
+}
 
 .footer-brand .brand-sub {
   color: #e7dbcf;
@@ -77,130 +81,40 @@
   text-decoration: underline dotted;
 }
 
-/* SNS - 동그랗고 심플한 아이콘 버튼 (이미지 또는 background 사용) */
-.sns-row {
+
+
+.footer-family {
+  min-width: 220px;
+}
+
+.footer-family form {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-/* 기본 SNS 버튼 (아이콘 대신 배경 이미지 또는 컬러 사용 가능) */
-.sns-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: inline-block;
-  background-size: 60% 60%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+.footer-family label {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #ffbebe;
 }
 
-/* 예시: 색상 포인트 및 hover */
-.sns-inst { background-image: url('/images/icons/inst.svg'); }
-.sns-fb   { background-image: url('/images/icons/fb.svg'); }
-.sns-blog { background-image: url('/images/icons/blog.svg'); }
-
-/* hover일 때 포인트 컬러(딥 블루 계열 라이트닝 + 골드 글로우) */
-.sns-btn:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 6px 18px rgba(50,40,30,0.28);
-  background-color: rgba(255,217,166,0.08);
-  border-color: rgba(255,217,166,0.12);
+.footer-family select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  width: 200px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* footer bottom */
-.footer-bottom {
-  margin-top: 30px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  padding-top: 18px;
+.footer-family select:hover {
+  border-color: #ffbebe;
+  box-shadow: 0 0 4px rgba(255, 190, 190, 0.6);
 }
-
-.bottom-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 8px;
-}
-
-/* small links in bottom */
-.bottom-inner p {
-  font-size: 0.88rem;
-  color: #d9cfc6;
-}
-
-.bottom-links a {
-  margin-left: 12px;
-  font-size: 0.88rem;
-  color: #d9cfc6;
-  text-decoration: none;
-  transition: color 0.18s ease;
-}
-
-.bottom-links a:hover {
-  color: #ffd9a6; /* 골드 포인트 */
-}
-
-/* responsive */
-@media (max-width: 720px) {
-  .bottom-inner {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-}
-
-
-/* =========================
-   모바일 반응형 (max-width: 768px)
-========================= */
-@media (max-width: 768px) {
-  .site-footer {
-    padding: 36px 12px 16px;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .footer-brand .brand-title {
-    font-size: 1.4rem;
-  }
-
-  .footer-brand .brand-sub {
-    font-size: 0.9rem;
-  }
-
-  .footer-col h4 {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-  }
-
-  .footer-links a,
-  .footer-contact p {
-    font-size: 0.9rem;
-  }
-
-  .footer-contact p {
-    line-height: 1.5;
-  }
-
-  .sns-row {
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .sns-btn {
-    width: 34px;
-    height: 34px;
-  }
 
   /* 하단 문구 정렬 */
   .footer-bottom {
@@ -223,4 +137,4 @@
   .bottom-inner p {
     font-size: 0.85rem;
   }
-}
+

@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
+
+/* ---------- 페이지 헤더 ---------- */
+.page-header {
+  background: #f5f2ed; /* 연한 아이보리톤 */
+  border-bottom: 1px solid #e3d8c8;
+  padding: 60px 0;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.page-header .inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-header h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #3c2f26; /* 진한 브라운 */
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.page-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #b99a74, #8c6b4a); /* 브라운 계열 그라데이션 */
+  border-radius: 2px;
+}
+
+.page-header p {
+  font-size: 1rem;
+  color: #7a6550; /* 서브텍스트 톤 다운 브라운 */
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+
+
+/* 업무 프로세스 */
+.process-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.step {
+  background: rgba(230, 190, 150, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(230, 190, 150, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-bottom: 60px;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  background: rgba(230, 190, 150, 0.25);
+}
+
+.step-icon {
+  font-size: 36px;
+  color: rgb(194, 126, 81);
+  margin-bottom: 10px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #aaa;
+  margin: 0 5px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .process-flow {
+    flex-direction: column;
+  }
+  .arrow {
+    display: none;
+  }
+}
