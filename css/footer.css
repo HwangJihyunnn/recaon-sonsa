@@ -17,6 +17,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 28px;
   align-items: start;
+  text-align: left;
 }
 
 /* 브랜드 컬럼 */

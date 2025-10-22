@@ -1,21 +1,26 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
 
-
-
-body {
+/* ===== 기본 설정 ===== */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: #000; /* 로딩 순간 흰 배경 방지 */
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
-  background: #f8f6f3;
-  color: #2f2722;
 }
 
-/* .main-img {width: 100%; height: auto; overflow: hidden; }
-.main-img img {width: 100%; height: 100%; object-fit: cover;position: relative; z-index: 0; filter: brightness(70%);} */
-
+/* ===== 메인 이미지 (배경 고정) ===== */
 .main-img {
+  position: fixed; /* 스크롤 내려도 고정 */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%; /* 원하는 높이 값 지정 */
+  height: 100vh;
   overflow: hidden;
+  z-index: 1;
 }
 
 .main-img img {
@@ -25,57 +30,145 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(70%);
+  object-position: center center;
   opacity: 0;
-  transition: opacity 1.2s ease-in-out;
+  transform: scale(1.05);
+  transition: opacity 1.5s ease, transform 8s ease;
+  filter: brightness(65%) contrast(105%);
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
+/* 활성화 이미지 */
 .main-img img.active {
   opacity: 1;
+  transform: scale(1);
 }
 
+/* 오버레이 효과 */
+.main-img::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.5));
+  z-index: 1;
+}
 
-.out-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; color: #dfdfdf; }
-.out-text h3 {font-family: 'Noto Serif KR'; font-weight: 700; font-size: 24px; line-height: 2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-.out-text h3 > span {font-size: 48px; color: rgb(194, 126, 81); font-weight: 800;}
+/* ===== 텍스트 영역 ===== */
+.out-text {
+  position: relative; /* ✅ 절대 위치 → 상대 위치로 변경 */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 화면 가운데 */
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
 
-.main-box {margin-top: 100px; }
-.main-box ul {display: inline-flex; gap: 20px; }
-.main-box ul li {width: 200px; height: 200px; background-color: rgba(0,0,0,0.5); border: 2px solid #fff;  display: flex; align-items: center; justify-content: center; }
-.main-box ul li > a {width: 100%; height: 100%; display: flex; align-items: center; flex-direction: column; justify-content: center; color: #fff; text-decoration: none; vertical-align: top; }
-.main-box ul li > a > span {font-size: 48px; display: flex; align-items: center; margin-bottom: 20px; }
+.main-headline h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  font-size: 54px;
+  letter-spacing: -1px;
+  color: #fff;
+  text-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  margin-bottom: 15px;
+}
 
-.main-box ul li:hover {background-color: rgba(0,0,0,0.7); border: 2px solid rgb(194, 126, 81); box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease; }
+.main-headline p {
+  font-size: 20px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 400;
+  margin-bottom: 80px;
+}
 
+/* ===== 카드 메뉴 ===== */
+.main-box ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
 
+.main-box ul li {
+  width: 190px;
+  height: 190px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
 
+.main-box ul li:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.25);
+  border-color: rgb(194, 126, 81);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
 
-/* =========================
-   모바일 반응형 (max-width: 768px)
-========================= */
+.main-box ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main-box ul li a span {
+  font-size: 46px;
+  margin-bottom: 15px;
+  color: rgb(230, 190, 150);
+  transition: transform 0.3s ease;
+}
+
+.main-box ul li:hover span {
+  transform: scale(1.2);
+}
+
+/* ===== 페이드인 애니메이션 ===== */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== footer ===== */
+footer {
+  position: relative;
+  z-index: 3;
+  background: #2e2e2e;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* ===== 모바일 ===== */
 @media (max-width: 768px) {
-
-  .out-text {
-    width: 90%;
-    top: 45%;
-    transform: translate(-50%, -45%);
+  .main-img {
+    height: 90vh;
   }
 
-  .out-text h3 {
-    margin-top: 150px;
-    font-size: 16px;
-    line-height: 1.6em;
+  .main-headline h1 {
+    font-size: 26px;
   }
 
-  .out-text h3 > span {
-    display: none;
-    font-size: 28px;
-    margin-top: 10px;
-  }
-
-  .main-box {
-    margin-top: 50px;
-    margin-bottom: 150px;
+  .main-headline p {
+    font-size: 14px;
+    margin-bottom: 50px;
   }
 
   .main-box ul {
@@ -84,24 +177,16 @@ body {
   }
 
   .main-box ul li {
-    /* width: 80%; */
-    height: 120px;
+    width: 80%;
+    height: 130px;
     margin: 0 auto;
-    /* border-radius: 12px; */
   }
 
-  .main-box ul li > a > span {
+  .main-box ul li a {
+    font-size: 15px;
+  }
+
+  .main-box ul li a span {
     font-size: 32px;
-    margin-bottom: 10px;
-  }
-
-  .main-box ul li > a {
-    font-size: 14px;
-  }
-
-
-
-  .main-img img {
-    object-position: center;
   }
 }
