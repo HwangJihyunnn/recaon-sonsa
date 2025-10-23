@@ -2,8 +2,11 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
 
+footer {background: #2e2e2e;}
+
+
 .site-footer {
-  background: linear-gradient(180deg, #3b2f27 0%, #342a23 100%); /* 진한 브라운 그라데이션 */
+  /* background: linear-gradient(180deg, #3b2f27 0%, #342a23 100%); */
   color: #f2e9df; /* 연한 아이보리 텍스트 */
   padding: 48px 16px 20px;
   font-family: 'Pretendard', 'Noto Serif KR', sans-serif;

@@ -9,12 +9,12 @@
  */
 
 
-/* ---------- 페이지 헤더 ---------- */
+/* ---------- 페이지 헤더 배너 ---------- */
 .page-header {
-  background: #f5f2ed; /* 연한 아이보리톤 */
-  border-bottom: 1px solid #e3d8c8;
+  position: relative;
+  background: #f5f9ff; /* 연한 화이트/블루톤 */
+  border-bottom: 1px solid #dbe9f8;
   padding: 60px 0;
-  margin-top: 25px;
   text-align: center;
 }
 
@@ -22,15 +22,17 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 .page-header h2 {
   font-family: 'Noto Serif KR', serif;
   font-size: 2rem;
   font-weight: 500;
-  color: #3c2f26; /* 진한 브라운 */
-  margin-bottom: 12px;
+  color: #222; /* 진한 텍스트 */
+  margin-bottom: 20px;
   position: relative;
+  z-index: 2; /* 이미지 위로 올라오도록 */
 }
 
 .page-header h2::after {
@@ -39,26 +41,46 @@
   width: 60px;
   height: 3px;
   margin: 10px auto 0;
-  background: linear-gradient(90deg, #b99a74, #8c6b4a); /* 브라운 계열 그라데이션 */
+  background: linear-gradient(90deg, #4a90e2, #5ca9ff); /* 포인트 블루 */
   border-radius: 2px;
+  position: relative;
+  z-index: 2;
 }
 
-.page-header p {
-  font-size: 1rem;
-  color: #7a6550; /* 서브텍스트 톤 다운 브라운 */
-  margin-top: 8px;
-  line-height: 1.6;
+.page-header img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 20px;
 }
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 0;
+  }
+
+  .page-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-header img {
+    max-height: 180px;
+  }
+}
+
 
 /* ---------- 컨테이너 ---------- */
 .container {
   width: 1000px;
   margin: 60px auto;
   padding: 60px 50px;
-  background: #fdfcfb;
+ /*  background: #fdfcfb;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid #e6dfd5;
+  border: 1px solid #e6dfd5; */
   text-align: center;
 }
 
@@ -133,13 +155,12 @@
 
 
 /* ---------- 텍스트 ---------- */
-.company_info h4 {
+ h4 {
   font-family: 'Noto Serif KR', serif;
   font-size: 1.1rem;
   color: #3b2f27;
   margin-bottom: 10px;
   text-align: center;
-  
 
 }
 
@@ -339,7 +360,7 @@
   flex: 1;
 }
 
-.location-info h2 {
+.location-info h4 {
   font-family: 'Noto Serif KR', serif;
   font-size: 2rem;
   font-weight: 600;
@@ -531,9 +552,6 @@
     line-height: 1.5;
   }
 }
-
-
-
 
 
 /* 반응형 */
