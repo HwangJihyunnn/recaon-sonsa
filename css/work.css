@@ -82,6 +82,17 @@
   margin-bottom: 10px;
 }
 
+step-icon:hover {
+  color: rgb(150, 90, 40);
+}
+
+.step > span {
+  font-size: 12px;
+  color: #5a4d41;
+  margin-top: 8px;
+  
+}
+
 .arrow {
   font-size: 24px;
   color: #aaa;
@@ -96,4 +107,71 @@
   .arrow {
     display: none;
   }
+}
+
+/* ---------- 컨테이너 ---------- */
+.container {
+  width: 1000px;
+  margin: 60px auto;
+  padding: 60px 50px;
+  background: #fdfcfb;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e6dfd5;
+  text-align: center;
+}
+
+.container > h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #3c2f26;
+  margin-bottom: 60px;
+  line-height: 1.7;
+  position: relative;
+}
+
+.container > h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #b99a74, #8c6b4a);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+
+.process-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.process-text .process-left {
+  flex: 1;
+  color: #5a4d41;
+  line-height: 3;
+  text-align: left;
+}
+.process-text .process-left p {
+  line-height: 2;}
+
+.process-left span {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #3c2f26;
+}
+
+.process-text .process-right {
+  flex: 1;
+  text-align: center;
+}
+
+.process-text .process-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
