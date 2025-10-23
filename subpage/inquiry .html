@@ -1,5 +1,6 @@
-<html lang="ko-KR">
-  <head>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi">
@@ -10,7 +11,7 @@
     <meta name="author" content="recaon Co.,Ltd.">
     <!-- og tag -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://recaon.com/">
+    <meta property="og:url" content="http://recaon.co.kr/">
     <meta property="og:title" content="리카온화재해상자동차손해사정">
     <meta property="og:description" content=":::손해사정 전문 법인 리카온손해사정:::">
     <meta property="og:site_name" content="리카온화재해상자동차손해사정">
@@ -18,65 +19,88 @@
     <meta property="og:image:width" content="400">
     <meta property="og:image:height" content="400">
     <title>리카온손해사정(주) &#124; RECAON.SONSA</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/header.css">
-    <link rel="stylesheet" type="text/css" href="./css/footer.css">
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
-    
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/inquiry.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
   </head>
-  <body>
+<body>
     <header id="header">
-    <div class="header-inner">
-      <h1 class="logo"><a href="../index.html"><img src="./img/h_logo.png" alt="리카온손해사정"></a></h1>
-
-        <!-- 모바일 메뉴 버튼 -->
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-      <nav class="nav" id="navMenu">
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <ul>
-          <li><a href="./subpage/intro.html">기업소개</a></li>
-          <li><a href="./subpage/work.html">손해사정</a></li>
-          <li><a href="./subpage/partner.html">파트너사</a></li>
-          <li><a href="./subpage/inquiry.html">문의하기</a></li>
-        </ul>
-      </nav>
-    </div>
+      <div class="header-inner">
+        <h1 class="logo"><a href="../index.html"><img src="../img/h_logo.png" alt="리카온손해사정"></a></h1>
+          <!-- 모바일 메뉴 버튼 -->
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+          <nav class="nav" id="navMenu">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <ul>
+              <li><a href="intro.html">기업소개</a></li>
+              <li><a href="work.html">손해사정</a></li>
+              <li><a href="partner.html">파트너사</a></li>
+              <li><a href="inquiry.html">문의하기</a></li>
+            </ul>
+          </nav>
+      </div>
     </header>
+    <main>
+        <!-- <div class="banner"><h3>기업소개</h3></div> -->
+      <section class="page-header">
+        <div class="inner">
+          <h2>손해사정이란?</h2>
+          <p>손해사정 단계별 업무와 무슨 업무를 하는지 보여드림~~</p>
+        </div>
+      </section>
+      <div class="container">
+         <h4>손해사정업무 프로세스</h4>
+        <div class="process-flow">
+            <div class="step">
+            <div class="step-icon material-symbols-outlined">receipt</div>
+            <p>보험사 위임</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+            <div class="step-icon material-symbols-outlined">apartment</div>
+            <p>본사 접수</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+            <div class="step-icon material-symbols-outlined">assignment</div>
+            <p>조사관 배정</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+            <div class="step-icon material-symbols-outlined">construction</div>
+            <p>현장 조사</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+            <div class="step-icon material-symbols-outlined">analytics</div>
+            <p>중간 보고</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+            <div class="step-icon material-symbols-outlined">check_circle</div>
+            <p>종결 보고</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+            <div class="step-icon material-symbols-outlined">payments</div>
+            <p>종결</p>
+            </div>
+        </div>
+      </div>
 
-   <main>
-  <div class="main-img">
-    <img src="./img/main1.jpg" alt="메인이미지" class="active">
-    <img src="./img/main2.jpg" alt="메인이미지">
-    <img src="./img/main3.jpg" alt="메인이미지">
-  </div>
-
-  <div class="out-text">
-    <div class="main-headline">
-      <h1>정직과 신뢰의 손해사정</h1>
-      <p>리카온손해사정은 고객의 권익 보호를 위해 언제나 최선을 다합니다.</p>
-    </div>
-
-    <div class="main-box">
-      <ul>
-        <li><a href="#"><span class="material-symbols-outlined">apartment</span>회사소개</a></li>
-        <li><a href="#"><span class="material-symbols-outlined">book_ribbon</span>손해사정</a></li>
-        <li><a href="#"><span class="material-symbols-outlined">outgoing_mail</span>문의하기</a></li>
-      </ul>
-    </div>
-  </div>
-  </main>
-
+    </main>
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-col footer-brand">
@@ -124,12 +148,8 @@
       </div>
     </footer>
 
-
-
-    <script src="./js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-     AOS.init();
-    </script>
-  </body>
+    
+    <script src="../js/history.js"></script>
+    <script src="../js/main.js"></script>
+</body>
 </html>
