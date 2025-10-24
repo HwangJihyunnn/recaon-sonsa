@@ -30,7 +30,8 @@ body {
 }
 
 #header.scrolled {
-  background: rgba(248, 245, 240, 0.95); /* 스크롤 후 밝은 배경 */
+  /* background: rgba(248, 245, 240, 0.95); */
+  background: #fefefe;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(80, 60, 40, 0.1);
 }
@@ -88,6 +89,14 @@ body {
   transition: color 0.3s ease;
 }
 
+.nav a.active {
+  color: #b99a74;
+}
+
+.nav a.active::after {
+  width: 100%;
+}
+
 #header.scrolled .nav a {
   color: #333;
 }
@@ -127,16 +136,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.login-btn {
-  border: 1px solid #b99a74;
-  background: transparent;
-  color: #b99a74;
-}
 
-.login-btn:hover {
-  background: #b99a74;
-  color: #fff;
-}
 
 /* 반응형 */
 @media (max-width: 900px) {
@@ -191,7 +191,8 @@ body {
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: rgba(250, 247, 242, 0.98);
+    /* background: rgba(250, 247, 242, 0.98); */
+    background: #fefefe;
     backdrop-filter: blur(6px);
     box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
     display: flex;
