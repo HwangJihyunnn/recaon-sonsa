@@ -56,48 +56,53 @@
         <!-- <div class="banner"><h3>기업소개</h3></div> -->
       <section class="page-header">
         <div class="inner">
-          <h2><span>Inquiry</span><br>기업소개</h2>
-          <img src="../img/banner1.jpg" alt="배너이미지">
+          <h2><span>Inquiry</span><br>문의하기</h2>
+          <img src="../img/banner4.jpg" alt="배너이미지">
         </div>
       </section>
       <div class="container">
-         <h4>손해사정업무 프로세스</h4>
-        <div class="process-flow">
-            <div class="step">
-            <div class="step-icon material-symbols-outlined">receipt</div>
-            <p>보험사 위임</p>
-            </div>
-            <div class="arrow">→</div>
-            <div class="step">
-            <div class="step-icon material-symbols-outlined">apartment</div>
-            <p>본사 접수</p>
-            </div>
-            <div class="arrow">→</div>
-            <div class="step">
-            <div class="step-icon material-symbols-outlined">assignment</div>
-            <p>조사관 배정</p>
-            </div>
-            <div class="arrow">→</div>
-            <div class="step">
-            <div class="step-icon material-symbols-outlined">construction</div>
-            <p>현장 조사</p>
-            </div>
-            <div class="arrow">→</div>
-            <div class="step">
-            <div class="step-icon material-symbols-outlined">analytics</div>
-            <p>중간 보고</p>
-            </div>
-            <div class="arrow">→</div>
-            <div class="step">
-            <div class="step-icon material-symbols-outlined">check_circle</div>
-            <p>종결 보고</p>
-            </div>
-            <div class="arrow">→</div>
-            <div class="step">
-            <div class="step-icon material-symbols-outlined">payments</div>
-            <p>종결</p>
-            </div>
+        <div class="container contact-container">
+    <h3>문의하기</h3>
+    <form id="contactForm">
+      <div class="form-row">
+        <label>법인명 <span>*</span></label>
+        <input type="text" name="company" placeholder="법인명을 입력해주세요" required>
+      </div>
+      <div class="form-row">
+        <label>담당자 <span>*</span></label>
+        <input type="text" name="manager" placeholder="담당자 이름" required>
+      </div>
+      <div class="form-row">
+        <label>핸드폰번호 <span>*</span></label>
+        <input type="tel" name="phone" placeholder="010-1234-5678" required>
+      </div>
+      <div class="form-row">
+        <label>이메일 <span>*</span></label>
+        <input type="email" name="email" placeholder="example@domain.com" required>
+      </div>
+      <div class="form-row">
+        <label>사진첨부</label>
+        <div class="file-upload">
+          <input type="file" name="file" id="fileInput" accept="image/*">
+          <label for="fileInput">파일 선택</label>
+          <div id="filePreview"></div>
         </div>
+      </div>
+      <div class="form-row">
+        <label>사고내용 <span>*</span></label>
+        <textarea name="content" rows="4" placeholder="사고 내용을 입력해주세요" required></textarea>
+      </div>
+      <div class="form-row">
+        <label>사고일 및 사고시간 <span>*</span></label>
+        <input type="datetime-local" name="date" required>
+      </div>
+      <div class="form-row">
+        <label>장소 <span>*</span></label>
+        <input type="text" name="location" placeholder="사고 장소" required>
+      </div>
+      <button type="submit" class="btn-submit">접수하기</button>
+    </form>
+  </div>
       </div>
 
     </main>

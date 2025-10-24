@@ -92,3 +92,109 @@
   margin: 20px auto 0;
   border-radius: 2px;
 } */
+
+
+
+.contact-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+.contact-container h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a3c6e;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #1a3c6e;
+}
+
+form input,
+form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccd6f6;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #3b6dd9;
+  box-shadow: 0 5px 20px rgba(59,109,217,0.2);
+}
+
+textarea { resize: vertical; }
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #3b6dd9, #1a3c6e);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(90deg, #1a3c6e, #3b6dd9);
+  box-shadow: 0 8px 25px rgba(59,109,217,0.25);
+}
+
+/* 파일첨부 커스텀 */
+.file-upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload label {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #3b6dd9, #1a3c6e);
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.file-upload label:hover {
+  background: linear-gradient(90deg, #1a3c6e, #3b6dd9);
+}
+
+#filePreview {
+  font-size: 0.85rem;
+  color: #3b6dd9;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 30px 20px;
+  }
+}
