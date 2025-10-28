@@ -101,4 +101,4 @@ fileInput.addEventListener('change', () => {
   } else {
     filePreview.textContent = '';
   }
-});
+}); 
