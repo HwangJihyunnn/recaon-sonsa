@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
 
+
 /* ===== 기본 설정 ===== */
 html, body {
   width: 100%;
@@ -12,9 +13,12 @@ html, body {
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
 }
 
+
+
+
 /* ===== 메인 이미지 (배경 고정) ===== */
 .main-img {
-  position: fixed; /* 스크롤 내려도 고정 */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
