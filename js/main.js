@@ -7,7 +7,7 @@ setInterval(() => {
   images[current].classList.remove('active');
   current = (current + 1) % images.length;
   images[current].classList.add('active');
-}, 3000); // 3초 간격
+}, 2000); // 3초 간격
 
 
 
@@ -72,33 +72,3 @@ tabBtns.forEach(btn => {
 
 
 
-// 협력사
-const showMoreBtn = document.getElementById("show-more-btn");
-const hiddenPartners = document.querySelectorAll(".partner.hidden");
-
-showMoreBtn.addEventListener("click", () => {
-  hiddenPartners.forEach((partner, i) => {
-    setTimeout(() => {
-      partner.classList.remove("hidden");
-      partner.style.opacity = "0";
-      partner.style.display = "block";
-      setTimeout(() => {
-        partner.style.opacity = "1";
-        partner.style.transition = "opacity 0.5s ease";
-      }, 50);
-    }, i * 100); // 하나씩 순차 등장
-  });
-  showMoreBtn.style.display = "none";
-});
-
-
-const fileInput = document.getElementById('fileInput');
-const filePreview = document.getElementById('filePreview');
-
-fileInput.addEventListener('change', () => {
-  if(fileInput.files.length > 0) {
-    filePreview.textContent = fileInput.files[0].name;
-  } else {
-    filePreview.textContent = '';
-  }
-}); 
