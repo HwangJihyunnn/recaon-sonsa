@@ -12,14 +12,14 @@ setInterval(() => {
 
 
 // 스크롤 시 헤더 변화
- window.addEventListener('scroll', () => {
+/*  window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     if (window.scrollY > 20) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-  });
+  }); */
 
 
 

@@ -213,38 +213,82 @@ step-icon:hover {
 }
 
 
+.work-text {
+    padding: 24px 28px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    line-height: 1.75;
+    color: #4b3d33; /* 진한 브라운 텍스트 */
+    font-weight: 400;
+    max-width: 750px; 
+    margin: 30px auto; /* 가운데 정렬 */
+}
+.work-text > span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #7a5a3c; /* 강조된 브라운 */
+}
+
+.work-text br {
+    margin-bottom: 8px;
+}
+
+
+
 .process-text {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
   gap: 20px;
 }
 
-.process-text .process-left {
-  flex: 1;
-  color: #5a4d41;
-  line-height: 3;
-  text-align: left;
-}
-.process-text .process-left p {
-  line-height: 2;}
 
-.process-left span {
+.process-left {
+  display: flex;
+  flex-direction: calc(100% / 3 - 20px);
+  gap: 15px;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.img img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+/* **오버레이** */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f3f0;
+  font-size: 18px;
   font-weight: 600;
-  font-size: 1.4rem;
-  color: #3c2f26;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .35s ease, transform .35s ease;
 }
 
-.process-text .process-right {
-  flex: 1;
-  text-align: center;
+/* **Hover 시 효과** */
+.img:hover img {
+  transform: scale(1.08);
 }
 
-.process-text .process-right img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.img:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -340,60 +384,82 @@ step-icon:hover {
 }
 
 
-/* 세부분야 */
+/* 세부분야 영역 */
 .process-flow {
     margin-top: 40px;
-    padding: 20px;
+    padding: 20px 0;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
 }
 
+/* 타이틀 */
 .pf-title {
-    font-size: 22px;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #1a3e78;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #6b4e3d; /* 깊은 브라운 */
+    letter-spacing: 0.5px;
 }
 
+/* 테이블 전체 */
 .pf-table {
     width: 100%;
     border-collapse: collapse;
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(180, 150, 120, 0.2);
 }
 
+/* 헤더 */
 .pf-table th {
-    background: rgb(189, 213, 255);
-    padding: 14px;
+    background: linear-gradient(to right, #d9c7b3, #e8ddcf); /* 베이지 그라데이션 */
+    padding: 16px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 15px;
+    color: #5a412f;
+    border-bottom: 1px solid rgba(140, 110, 85, 0.25);
+    letter-spacing: 0.4px;
 }
 
+/* 기본 셀 */
 .pf-table td {
-    padding: 14px;
+    padding: 18px 16px;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
     vertical-align: top;
-    background: #f8fafc;
+    color: #4e3a2f;
+    background: #fff;
+    border-bottom: 1px solid rgba(180, 150, 120, 0.15);
 }
 
+/* 줄마다 은은한 배경 */
 .pf-table tr:nth-child(even) td {
-    background: #eef4ff;
+    background: #faf6f2; /* 부드러운 연베이지 */
 }
 
+/* 첫 번째 열(카테고리) 강조 */
 .pf-table td:first-child {
-    font-weight: 600;
-    width: 15%;
+    font-weight: 700;
+    width: 16%;
     text-align: center;
-    color: #333;
+    color: #5e4533;
+    background: #f2e7db !important;
+    border-right: 1px solid rgba(140, 110, 85, 0.2);
 }
 
+/* 두 번째 열 */
 .pf-table td:nth-child(2) {
-    width: 23%;
+    width: 22%;
 }
 
+/* 세 번째 열 */
 .pf-table td:nth-child(3) {
     width: 62%;
 }
 
+/* 마지막 줄 보더 제거로 더 깔끔하게 */
+.pf-table tr:last-child td {
+    border-bottom: none;
+}
