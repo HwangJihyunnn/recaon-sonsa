@@ -61,48 +61,49 @@
         </div>
       </section>
       <div class="container">
-        <div class="container contact-container">
-    <h3>문의하기</h3>
-    <form id="contactForm">
-      <div class="form-row">
-        <label>법인명 <span>*</span></label>
-        <input type="text" name="company" placeholder="법인명을 입력해주세요" required>
-      </div>
-      <div class="form-row">
-        <label>담당자 <span>*</span></label>
-        <input type="text" name="manager" placeholder="담당자 이름" required>
-      </div>
-      <div class="form-row">
-        <label>핸드폰번호 <span>*</span></label>
-        <input type="tel" name="phone" placeholder="010-1234-5678" required>
-      </div>
-      <div class="form-row">
-        <label>이메일 <span>*</span></label>
-        <input type="email" name="email" placeholder="example@domain.com" required>
-      </div>
-      <div class="form-row">
-        <label>사진첨부</label>
-        <div class="file-upload">
-          <input type="file" name="file" id="fileInput" accept="image/*">
-          <label for="fileInput">파일 선택</label>
-          <div id="filePreview"></div>
-        </div>
-      </div>
-      <div class="form-row">
-        <label>사고내용 <span>*</span></label>
-        <textarea name="content" rows="4" placeholder="사고 내용을 입력해주세요" required></textarea>
-      </div>
-      <div class="form-row">
-        <label>사고일 및 사고시간 <span>*</span></label>
-        <input type="datetime-local" name="date" required>
-      </div>
-      <div class="form-row">
-        <label>장소 <span>*</span></label>
-        <input type="text" name="location" placeholder="사고 장소" required>
-      </div>
-      <button type="submit" class="btn-submit">접수하기</button>
-    </form>
-  </div>
+        <section class="contact-section">
+  <h2>문의하기</h2>
+  <form action="https://formspree.io/f/너의폼ID" method="POST" enctype="multipart/form-data" class="contact-form">
+    <div class="input-group">
+      <input type="text" name="company" id="company" required>
+      <label for="company">법인명</label>
+    </div>
+
+    <div class="input-group">
+      <input type="text" name="manager" id="manager" required>
+      <label for="manager">담당자</label>
+    </div>
+
+    <div class="input-group">
+      <input type="tel" name="phone" id="phone" required>
+      <label for="phone">연락 가능한 번호</label>
+    </div>
+
+    <div class="input-group">
+      <input type="email" name="email" id="email" required>
+      <label for="email">이메일</label>
+    </div>
+
+    <div class="input-group file-group">
+      <input type="file" name="file" id="file">
+      <label for="file">사진 첨부</label>
+    </div>
+
+    <div class="input-group">
+      <textarea name="accident" id="accident" rows="5" required></textarea>
+      <label for="accident">사고 내용</label>
+    </div>
+
+    <div class="input-group">
+      <input type="text" name="location" id="location" required>
+      <label for="location">장소</label>
+    </div>
+
+    <button type="submit">문의 보내기</button>
+  </form>
+</section>
+
+
       </div>
 
     </main>

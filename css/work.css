@@ -65,36 +65,6 @@
 
 
 /* ---------- 컨테이너 ---------- */
-.container {
-  width: 1000px;
-  margin: 60px auto;
-  padding: 60px 50px;
- /*  background: #fdfcfb;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid #e6dfd5; */
-  text-align: center;
-}
-
-.container > h3 {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 1.7rem;
-  font-weight: 500;
-  color: #3c2f26;
-  margin-bottom: 60px;
-  line-height: 1.7;
-  position: relative;
-}
-
-/* .container > h3::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #b99a74, #8c6b4a);
-  margin: 20px auto 0;
-  border-radius: 2px;
-} */
 
 
 /* 모바일 반응형 */
@@ -184,10 +154,7 @@ step-icon:hover {
   width: 1000px;
   margin: 60px auto;
   padding: 60px 50px;
-  background: #fdfcfb;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid #e6dfd5;
   text-align: center;
 }
 
@@ -201,15 +168,18 @@ step-icon:hover {
   position: relative;
 }
 
-.container > h3::after {
+.container > h3::before {
   content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
+  display: inline-block;
+  width: 5px;
+  height: 40px;
   background: linear-gradient(90deg, #b99a74, #8c6b4a);
   margin: 20px auto 0;
   border-radius: 2px;
+  vertical-align: bottom;
+  margin-right: 10px;
 }
+
 
 
 .work-text {
