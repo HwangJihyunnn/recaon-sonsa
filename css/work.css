@@ -45,7 +45,6 @@
   max-height: 400px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin-top: 20px;
   filter: brightness(65%); /* 수정됨: 이미지 어둡게 처리해서 글씨 잘 보이게 */
 }
 

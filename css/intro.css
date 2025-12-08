@@ -243,6 +243,8 @@
   box-shadow: 0 14px 30px rgba(80, 60, 40, 0.15);
 }
 
+
+/* 갖ㅎ */
 /* 말풍선 꼬리 */
 .timeline-item:nth-child(odd) .timeline-content::after {
   content: "";
