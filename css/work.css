@@ -166,16 +166,17 @@ step-icon:hover {
   margin-bottom: 60px;
   line-height: 1.7;
   position: relative;
+  text-align: left;
+
 }
 
 .container > h3::before {
   content: "";
   display: inline-block;
-  width: 5px;
-  height: 40px;
-  background: linear-gradient(90deg, #b99a74, #8c6b4a);
+  width: 8px;
+  height: 36px;
+  background: linear-gradient(180deg, #b99a74, #e0d6cb);
   margin: 20px auto 0;
-  border-radius: 2px;
   vertical-align: bottom;
   margin-right: 10px;
 }
@@ -183,15 +184,14 @@ step-icon:hover {
 
 
 .work-text {
-    padding: 24px 28px;
     border-radius: 10px;
-
     font-size: 16px;
     line-height: 1.75;
     color: #4b3d33; /* 진한 브라운 텍스트 */
     font-weight: 400;
     max-width: 750px; 
-    margin: 30px auto; /* 가운데 정렬 */
+    text-align: left;
+    margin-bottom: 100px;
 }
 .work-text > span {
     font-size: 20px;
@@ -215,6 +215,7 @@ step-icon:hover {
 
 .process-left {
   display: flex;
+  flex-direction: column;
   flex-direction: calc(100% / 3 - 20px);
   gap: 15px;
 }
@@ -227,9 +228,11 @@ step-icon:hover {
   cursor: pointer;
 }
 
+.img > .overlay {font-weight: 300; font-size: 14px; color: #f5f3f0;}
+
 .img img {
-  width: 300px;
-  height: 100%;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
   transition: transform .4s ease;
 }
@@ -267,10 +270,14 @@ step-icon:hover {
 .tab-menu {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  width: 100%;
 }
 
 .tab-btn {
+  margin-bottom: 100px;
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
   padding: 10px 50px;
   border: none;
   border-bottom: 1px solid #ab7f4a;
@@ -355,7 +362,6 @@ step-icon:hover {
 
 /* 세부분야 영역 */
 .process-flow {
-    margin-top: 40px;
     padding: 20px 0;
     font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
 }

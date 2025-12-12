@@ -160,6 +160,7 @@ footer {background: #2e2e2e;}
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  font-size: 12px;
 }
 
 /* 팝업 콘텐츠 */
@@ -173,6 +174,8 @@ footer {background: #2e2e2e;}
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   overflow-y: auto;
 }
+
+.popup-content > p {font-size: 14px;}
 
 /* 제목 */
 .popup-content h2 {

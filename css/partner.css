@@ -81,11 +81,10 @@
 .container > h3::before {
   content: "";
   display: inline-block;
-  width: 5px;
-  height: 40px;
-  background: linear-gradient(90deg, #b99a74, #8c6b4a);
+  width: 8px;
+  height: 36px;
+  background: linear-gradient(180deg, #b99a74, #e0d6cb);
   margin: 20px auto 0;
-  border-radius: 2px;
   vertical-align: bottom;
   margin-right: 10px;
 }
@@ -97,24 +96,23 @@
 }
 
 .partners-part {
-  display: inline-block;
-  position: relative;
-  padding-right: 10px; /* 텍스트와 라인 사이 간격 */
-  /* font-weight: bold; */
-   font-size: 1.5rem;
-  font-weight: 600;
+  display: block;
+  padding-right: 10px;
+  font-size: 1.5rem;
   color: #3c2f26;
   margin-bottom: 40px;
+  border-radius: 50px;
+  text-align: center;
 }
 
-.partners-part::after {
+/* .partners-part::after {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 600px; /* 라인 길이, 필요하면 %나 auto로 조정 가능 */
-  border-bottom: 2px solid #db9f5a; /* 원하는 색상과 두께 */
-  margin-left: 10px; /* 텍스트와 라인 사이 간격 */
-}
+  width: 600px; 
+  border-bottom: 2px solid #db9f5a;
+  margin-left: 10px; 
+} */
 
 /* .partners-title {
   font-family: 'Noto Serif KR', serif;
