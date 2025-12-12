@@ -108,7 +108,7 @@ footer {background: #2e2e2e;}
   background-color: #626262;
   color: #fefefe;
   font-size: 14px;
-  text-align: center;
+  text-align: right;
   width: 200px;
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -145,3 +145,61 @@ footer {background: #2e2e2e;}
     font-size: 0.85rem;
   }
 
+
+
+
+
+
+
+  /* 공통 팝업 백그라운드 */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 팝업 콘텐츠 */
+.popup-content {
+  width: 480px;
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 32px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow-y: auto;
+}
+
+/* 제목 */
+.popup-content h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* 닫기 버튼 */
+.popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: #e5e5e5;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.popup-close:hover {
+  background: #d5d5d5;
+}
+
+/* footer 링크 */
+.bottom-links a {
+  cursor: pointer;
+}
