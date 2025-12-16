@@ -178,7 +178,7 @@ body {
   .menu-toggle span {
     display: block;
     height: 3px;
-    background: #f9f9f9; /* 기본 흰색 */
+    background: #545151; /* 기본 흰색 */
     border-radius: 3px;
     transition: all 0.3s ease;
   }
