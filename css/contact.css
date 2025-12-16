@@ -60,162 +60,179 @@
 }
 
 
-/* ---------- 컨테이너 ---------- */
-.container {
-  width: 1000px;
+/* 전체 섹션 */
+.container {display: flex; flex-direction: row;  width: 1000px;
   margin: 60px auto;
-  padding: 60px 50px;
- /*  background: #fdfcfb;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid #e6dfd5; */
-  text-align: center;
+  padding: 60px 50px ;
+  border-radius: 18px; justify-content: space-between;}
+/* 좌측 콘텐츠 */
+.content-left {
+  border-radius: 20px;
+  max-width: 520px;
+  width: calc(50% - 20px);
 }
-
-.container > h3 {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 1.7rem;
-  font-weight: 500;
-  color: #3c2f26;
-  margin-bottom: 60px;
-  line-height: 1.7;
-  position: relative;
-}
-
-/* .container > h3::after {
-  content: "";
+.content-left >  span {
+  font-size: 15px;
+  color: #4b5563;
   display: block;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #b99a74, #8c6b4a);
-  margin: 20px auto 0;
-  border-radius: 2px;
-} */
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  line-height: 1.2;
+  }
+
+/* 회사명 */
+.content-left h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+/* 설명 문구 */
+.content-left p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
 
 
 
-.contact-container {
-  max-width: 700px;
-  margin: 50px auto;
+
+.content-left a:hover::after {
+  width: 100%;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .content-left {
+    padding: 40px 28px;
+  }
+
+  .content-left h3 {
+    font-size: 22px;
+  }
+}
+
+
+
+
+.contact-section {
+  width: calc(50% - 20px);
+  /* margin: 120px auto; */
   padding: 40px;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
 }
 
-.contact-container h3 {
-  text-align: center;
-  font-size: 2rem;
-  color: #1a3c6e;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-.contact-section {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #f8fafc;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  font-family: 'Arial', sans-serif;
-}
-
+/* 제목 */
 .contact-section h2 {
-  text-align: center;
-  color: #1e3a8a;
-  margin-bottom: 25px;
-}
-
-.contact-section {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 40px 30px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  font-family: 'Inter', sans-serif;
-}
-
-.contact-section h2 {
-  text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
-  color: #1d4ed8;
-  margin-bottom: 35px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #111;
+  letter-spacing: -0.02em;
 }
 
-.contact-form .input-group {
+/* 폼 */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* 인풋 그룹 */
+.input-group {
   position: relative;
-  margin-bottom: 25px;
 }
 
-.contact-form input,
-.contact-form textarea {
+/* 인풋 & 텍스트에어리어 */
+.input-group input,
+.input-group textarea {
   width: 100%;
-  padding: 15px 15px 15px 15px;
-  border: 1px solid #cbd5e1;
-  border-radius: 12px;
-  font-size: 14px;
-  background: #f9fafb;
+  padding: 16px 14px;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid #e5e7eb;
+  background: transparent;
   outline: none;
-  transition: all 0.3s;
+  transition: border-color 0.3s ease;
+  color: #111;
+  resize: none;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #2563eb;
-  background: #ffffff;
+/* 포커스 시 */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-bottom-color: #3c2f26;
 }
 
-.contact-form label {
+/* 라벨 (플로팅 효과) */
+.input-group label {
   position: absolute;
+  left: 14px;
   top: 50%;
-  left: 15px;
   transform: translateY(-50%);
-  color: #6b7280;
   font-size: 14px;
+  color: #9ca3af;
   pointer-events: none;
-  transition: all 0.2s ease-out;
-}
-
-.contact-form input:focus + label,
-.contact-form input:not(:placeholder-shown) + label,
-.contact-form textarea:focus + label,
-.contact-form textarea:not(:placeholder-shown) + label {
-  top: -10px;
-  left: 12px;
-  font-size: 12px;
-  color: #2563eb;
-  background: #ffffff;
+  transition: all 0.25s ease;
   padding: 0 4px;
 }
 
-.contact-form .file-group input {
-  padding: 8px;
+/* textarea 라벨 위치 보정 */
+.input-group textarea + label {
+  top: 18px;
+  transform: none;
 }
 
+/* 값이 있거나 포커스 시 라벨 위로 */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: #3c2f26;
+}
+
+/* 버튼 */
 .contact-form button {
-  width: 100%;
-  padding: 15px;
+  margin-top: 30px;
+  padding: 16px;
   font-size: 16px;
   font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(90deg,#3b82f6,#60a5fa);
-  border: none;
   border-radius: 12px;
+  border: none;
+  background: linear-gradient(180deg, #b99a74, rgb(117, 69, 18));
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* 버튼 호버 */
 .contact-form button:hover {
-  background: linear-gradient(90deg,#2563eb,#3b82f6);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(152, 152, 153, 0.35);
 }
 
-/* 반응형 */
-@media (max-width: 480px) {
+/* 버튼 클릭 */
+.contact-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 15px rgba(152, 152, 153, 0.35);
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
   .contact-section {
-    padding: 30px 20px;
+    padding: 40px 20px;
+    margin: 60px 16px;
+  }
+
+  .contact-section h2 {
+    font-size: 26px;
   }
 }
