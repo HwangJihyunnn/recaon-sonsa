@@ -27,6 +27,7 @@ body {
   backdrop-filter: blur(3px); 
   border-bottom: 1px solid rgba(200, 180, 150, 0.3);
   transition: background 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+  box-shadow: 0 4px 20px rgb(78 78 78 / 51%);
 }
 
 #header.scrolled {

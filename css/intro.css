@@ -33,7 +33,7 @@
     z-index: 2; /* 이미지 위로 올라오도록 */
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
 }
-.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0);}
+.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0); font-family: 'Noto Serif KR', sans-serif;}
 
 
 .page-header img {
@@ -353,15 +353,23 @@
   flex: 1;
 }
 
-.location-info h4 {
+.location-info > h4 {
   font-family: 'Noto Serif KR', serif;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.7rem;
+  font-weight: 400;
   margin-bottom: 20px;
   color: #3b2f27;
-  border-left: 5px solid #b99a74;
-  padding-left: 15px;
   text-align: left;
+}
+
+.location-info > h4::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 36px;
+  background: linear-gradient(180deg, #b99a74, #e0d6cb);
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .location-info .address {

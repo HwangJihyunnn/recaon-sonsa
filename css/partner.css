@@ -33,7 +33,7 @@
     z-index: 2; /* 이미지 위로 올라오도록 */
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
 }
-.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0);}
+.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0);font-family: 'Noto Serif KR', sans-serif;}
 
 
 .page-header img {
@@ -92,7 +92,7 @@
 
 
 .partners-section {
-  padding: 100px 20px;
+  padding: 100px 0;
 }
 
 .partners-part {
@@ -102,7 +102,6 @@
   color: #3c2f26;
   margin-bottom: 40px;
   border-radius: 50px;
-  text-align: center;
 }
 
 /* .partners-part::after {
@@ -138,3 +137,19 @@
 .cli-big > li > figure > .imgmw-50 {max-width: 50%;}
 .cli-big > li > figure > .imgmw-55 {max-width: 55%;}
 .cli-big > li > figure > .imgmw-67 {max-width: 67%;}
+
+.proposal-download {display: flex; justify-content: center; }
+.proposal-download p {
+  display: inline-block;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.proposal-download p:hover {
+  background: #222;
+  color: #fff;
+}

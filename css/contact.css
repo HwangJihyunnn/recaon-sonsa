@@ -33,7 +33,7 @@
     z-index: 2; /* 이미지 위로 올라오도록 */
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
 }
-.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0);}
+.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0);font-family: 'Noto Serif KR', sans-serif;}
 
 
 .page-header img {
