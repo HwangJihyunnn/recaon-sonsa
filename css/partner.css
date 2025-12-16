@@ -104,26 +104,6 @@
   border-radius: 50px;
 }
 
-/* .partners-part::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 600px; 
-  border-bottom: 2px solid #db9f5a;
-  margin-left: 10px; 
-} */
-
-/* .partners-title {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #3c2f26;
-  margin-bottom: 20px;
-  position: relative;
-} */
-
-
-
 /* client */
 .client {background: #F6F9FF; display: flex; flex-direction: column; justify-content: center; padding: 160px 0;}
 .cli-big {display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; padding-bottom: 160px;}

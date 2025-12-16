@@ -64,45 +64,47 @@
       <div class="container">
         <section class="contact-section">
           <h2>문의하기</h2>
-          <form action="https://formspree.io/f/너의폼ID" method="POST" enctype="multipart/form-data" class="contact-form">
+          <form id="gform"
+            action="https://script.google.com/macros/s/AKfycbwn3riVjcbaUdM5eZBnbJ0ro5Px6h5rbrI0R0WjXJyuScka_dqYnbNIv1JN1CVLmTbC/exec"
+            method="post"
+            enctype="multipart/form-data"
+            class="contact-form">
+
             <div class="input-group">
-              <input type="text" name="company" id="company" required>
-              <label for="company">법인명</label>
+              <input type="text" name="company" required>
+              <label>법인명</label>
             </div>
 
             <div class="input-group">
-              <input type="text" name="manager" id="manager" required>
-              <label for="manager">담당자</label>
+              <input type="text" name="manager" required>
+              <label>담당자</label>
             </div>
 
             <div class="input-group">
-              <input type="tel" name="phone" id="phone" required>
-              <label for="phone">연락 가능한 번호</label>
+              <input type="tel" name="phone" required>
+              <label>연락 가능한 번호</label>
             </div>
 
             <div class="input-group">
-              <input type="email" name="email" id="email" required>
-              <label for="email">이메일</label>
-            </div>
-
-            <div class="input-group file-group">
-              <input type="file" name="file" id="file">
-              <label for="file">사진 첨부</label>
+              <input type="email" name="email" required>
+              <label>이메일</label>
             </div>
 
             <div class="input-group">
-              <textarea name="accident" id="accident" rows="5" required></textarea>
-              <label for="accident">사고 내용</label>
+              <textarea name="accident" rows="5" required></textarea>
+              <label>사고 내용</label>
             </div>
 
             <div class="input-group">
-              <input type="text" name="location" id="location" required>
-              <label for="location">장소</label>
+              <input type="text" name="location" required>
+              <label>장소</label>
             </div>
 
             <button type="submit">문의 보내기</button>
           </form>
         </section>
+
+
       </div>
     </main>
     <footer class="site-footer">
@@ -291,7 +293,35 @@
       </div>
     </div>
 
-    
+<script>
+  const form = document.getElementById("gform");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // 기본 submit 막기
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.result === "success") {
+        alert("✔ 성공적으로 접수되었습니다.");
+        form.reset(); // 폼 초기화
+      } else {
+        alert("❌ 전송에 실패했습니다. 다시 시도해주세요.");
+      }
+    })
+    .catch(err => {
+      alert("❌ 오류가 발생했습니다.");
+      console.error(err);
+    });
+  });
+</script>
+
+
     <script src="../js/history.js"></script>
     <script src="../js/main.js"></script>
 </body>
