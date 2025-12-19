@@ -10,6 +10,35 @@ setInterval(() => {
 }, 2000); // 3초 간격
 
 
+// 숫자 카운트다운
+window.onload = () => {
+  const counters = document.querySelectorAll(".stat-item strong");
+
+  counters.forEach(counter => {
+    const target = Number(counter.dataset.count);
+    let current = 0;
+    const duration = 1500;
+    const start = performance.now();
+
+    function animate(time) {
+      const progress = Math.min((time - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out
+      current = Math.floor(eased * target);
+
+      counter.textContent = current.toLocaleString();
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        counter.textContent = target.toLocaleString();
+      }
+    }
+
+    requestAnimationFrame(animate);
+  });
+};
+
+
 
  // header
   let navList = document.querySelector("header");

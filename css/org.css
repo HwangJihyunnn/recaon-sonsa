@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
+
+
+/* ---------- 페이지 헤더 배너 ---------- */
+.page-header {
+  position: relative;
+  background: #f5f9ff; /* 연한 화이트/블루톤 */
+  border-bottom: 1px solid #dbe9f8;
+  /* padding: 60px 0; */
+  text-align: center;
+}
+
+.page-header .inner {
+ /*  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px; */
+  position: relative;
+}
+
+
+.page-header h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'Noto Sans KR', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    z-index: 2; /* 이미지 위로 올라오도록 */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
+}
+.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0); font-family: 'Noto Serif KR', sans-serif;}
+
+
+.page-header img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  filter: brightness(65%); /* 수정됨: 이미지 어둡게 처리해서 글씨 잘 보이게 */
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .page-header {
+    /* padding: 40px 0; */
+  }
+
+  .page-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-header img {
+    max-height: 180px;
+  }
+}
+
+
+/* ---------- 컨테이너 ---------- */
+.container {
+  width: 1000px;
+  margin: 60px auto;
+  padding: 60px 50px;
+ /*  background: #fdfcfb;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e6dfd5; */
+  text-align: center;
+}
+
+.container > h3, .talent-section > h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #3c2f26;
+  margin-bottom: 60px;
+  line-height: 1.7;
+  position: relative;
+  text-align: left;
+}
+
+.container > h3::before, .talent-section > h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 36px;
+  background: linear-gradient(180deg, #b99a74, #e0d6cb);
+  margin: 20px auto 0;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  text-align: left;
+}
+
+
+/* 조직도 */
+.org-section {
+  max-width: 100%;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.org-section h4, .place h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.org-section h4::before,
+.org-section h4::after, .place h4::before, .place h4::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+/* 전체 정렬 */
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 줄 */
+.org-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.org-row.teams {
+  margin-top: 10px;
+}
+
+/* 박스 공통 */
+.org-box {
+  min-width: 200px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* 대표 */
+.org-box.ceo {
+  background: #222;
+  color: #fff;
+  border: none;
+}
+
+.org-box.ceo strong {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 책임자 */
+.org-box.manager {
+  background: #f4f6fa;
+}
+
+.org-title {
+  display: block;
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+/* 팀 */
+.org-box.team {
+  font-weight: 600;
+  background: #fafafa;
+}
+
+/* 연결선 */
+.org-line.vertical {
+  width: 2px;
+  height: 30px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .org-row.teams {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .org-box {
+    min-width: 240px;
+  }
+}
+
+
+/* 인재상 */
+.talent-section {margin: 30px 0;}
+
+
+.talent-list.modern {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.talent-card {
+  position: relative;
+  padding: 48px 28px 32px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.talent-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.talent-num {
+  position: absolute;
+  top: -22px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #333; /* 골드 포인트 */
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talent-card h5 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.talent-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+
+/* 지점 */
+.place img {
+  max-width: 80%;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .talent-list.modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .talent-list.modern {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .org-level {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .talent-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .talent-list {
+    grid-template-columns: 1fr;
+  }
+}
