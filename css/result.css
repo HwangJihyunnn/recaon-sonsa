@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
+
+
+/* ---------- 페이지 헤더 배너 ---------- */
+.page-header {
+  position: relative;
+  background: #f5f9ff; /* 연한 화이트/블루톤 */
+  border-bottom: 1px solid #dbe9f8;
+  /* padding: 60px 0; */
+  text-align: center;
+}
+
+.page-header .inner {
+ /*  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px; */
+  position: relative;
+}
+
+
+.page-header h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'Noto Sans KR', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    z-index: 2; /* 이미지 위로 올라오도록 */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
+}
+.page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0);font-family: 'Noto Serif KR', sans-serif;}
+
+
+.page-header img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  filter: brightness(65%); /* 수정됨: 이미지 어둡게 처리해서 글씨 잘 보이게 */
+}
+
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+
+
+  .page-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-header img {
+    max-height: 180px;
+  }
+}
+
+/* ---------- 컨테이너 ---------- */
+.container {
+  width: 1000px;
+  margin: 60px auto;
+  padding: 60px 50px;
+  border-radius: 18px;
+}
+
+.container > h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #3c2f26;
+  margin-bottom: 60px;
+  line-height: 1.7;
+  position: relative;
+}
+
+
+.container > h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 36px;
+  background: linear-gradient(180deg, #b99a74, #e0d6cb);
+  margin: 20px auto 0;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+
+/* 주요 성과 */
+.performance-section {
+  margin: 120px 0;
+}
+
+.performance-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.performance-header h4 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.performance-header p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* 상단 비주얼 */
+.performance-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+/* 그래프 박스 */
+.graph-box {
+  background: #fff;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.graph-title {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.bar-graph {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  height: 220px;
+  margin-bottom: 25px;
+}
+
+.bar {
+  width: 50px;
+  height: 0;
+  background: linear-gradient(to top, #999, #333);
+  border-radius: 8px 8px 0 0;
+  transition: height 1.2s ease;
+}
+
+.graph-desc {
+  font-size: 14px;
+  color: #777;
+}
+
+/* 텍스트 영역 */
+.graph-text h5 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.graph-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.graph-text .highlight {
+  background: #f8fafc;
+  padding: 20px;
+  border-left: 4px solid #b58a2f;
+  font-weight: 600;
+}
+
+/* 하단 수치 */
+.performance-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.stat-card {
+  padding: 30px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-card span {
+  font-size: 15px;
+  color: #666;
+}
+
+.stat-card.highlight {
+  background: #222;
+  color: #fff;
+}
+
+.stat-card.highlight span {
+  color: #ccc;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .performance-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

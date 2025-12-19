@@ -174,4 +174,29 @@ document.querySelectorAll('.popup').forEach(popup => {
 
 
 
+// 문의하기 - 자주하는 질문
+const faqItems = document.querySelectorAll(".faq-item");
 
+faqItems.forEach(item => {
+  const btn = item.querySelector(".faq-question");
+
+  btn.addEventListener("click", () => {
+    // 하나만 열리게
+    faqItems.forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+
+
+// 매출 그래프
+window.addEventListener("load", () => {
+  const bars = document.querySelectorAll(".bar");
+
+  bars.forEach(bar => {
+    const height = bar.dataset.height;
+    bar.style.height = height + "%";
+  });
+});
