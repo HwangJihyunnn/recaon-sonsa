@@ -1,251 +1,105 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600&family=Pretendard:wght@400;500;600&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: 'Noto Sans KR', serif;
   padding-top: 80px;
 }
+#header { position: fixed; top: 0; left: 50%; width: 100%; height: 82px; max-width: inherit; transform: translateX(-50%); z-index: 999; background-color: #fefefe; transition: all 300ms ease-out; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 
-/* =========================
-   헤더 기본
-========================= */
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  z-index: 1000;
-  background: #fefefe;
-  color: #333;
-  backdrop-filter: blur(3px); 
-  border-bottom: 1px solid rgba(200, 180, 150, 0.3);
-  transition: background 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
-  box-shadow: 0 4px 20px rgb(78 78 78 / 51%);
+/*헤더 전체*/
+#header:hover {height: 296px; background-color: rgba(0,0,0,0.8);  box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+#header:hover ul.nav > .main-menu .nav-sub { opacity: 1; height: auto; margin-top: 72px; }
+#header:hover ul.nav > .main-menu .nav-sub li { margin-bottom: 20px; visibility: visible; }
+
+/*헤더 로고 및 모바일 햄버거 버튼*/
+#header .logo { position: absolute; top: 7px; left: 10%; display: flex; align-items: center;}
+#header .logo img {width: 100%; height: 40px; margin-top: 19px; }
+#header .open-btn { position: absolute; top: 50%; right: 5%; width: 50px; height: 50px; transform: translateY(-50%); opacity: 0; z-index: -9; cursor: pointer; transition: all 250ms ease-out; }
+#header .open-btn span { font-size: 50px; color: #fefefe; }
+#header .open-btn span:first-child { display: block; }
+#header .open-btn span:last-child { display: none; }
+#header .open-bg { position: fixed; width: 100vw; height: 100vh; top: 0; left: 100%; background-color: rgba(1, 1, 1, .5); transition: opacity 250ms ease-out; opacity: 0; }
+
+
+#header .gnb .logo { opacity: 0; }
+#header .gnb { position: absolute; top: 36px; right: 10%; color: #333; }
+#header .gnb:hover {color: #fff;}
+#header .gnb > .nav > .main-menu { float: left; margin: 0 0 0 80px; cursor: pointer; transition: all 250ms linear; position: relative; text-align: center; }
+#header ul.nav .main-menu:hover:before { content: ''; position: absolute; top: -36px; left: 50%; transform: translateX(-50%); width: 180%; height: 296px; background: rgba(244, 244, 244, 0.3); transition: all 200ms ease-out; color: #b99a74; pointer-events: none; } /*큰박스*/
+#header ul.nav .main-menu > a { font-family: 'Noto Sans KR'; font-weight: 500; font-size: 18px; text-transform: uppercase;  position: relative; transition: color 100ms linear; }
+
+#header ul.nav .main-menu:hover {color: #b99a74 !important;  }
+#header ul.nav .main-menu > a:before { content: ''; position: absolute; bottom: -36px; left: 50%; transform: translateX(-50%); height: 2px; background-color: #b99a74; opacity: 0; width: 0; transition: width 250ms ease-out; }
+#header ul.nav .main-menu:hover > a:before { opacity: 1; width: 135%; color: #fefefe !important;} /*pc메뉴 바*/
+#header ul.nav .main-menu .nav-sub { opacity: 0; margin-top: 0; text-align: center; height: 0; transition: opacity 400ms ease-out, height 400ms ease-out; }
+#header ul.nav .main-menu .nav-sub li { margin-bottom: 0px; visibility: hidden; width: 100px;}
+#header ul.nav .main-menu .nav-sub li a { font-family: 'Noto Sans KR'; font-size: 16px; font-weight:500; line-height: 1.2em; text-transform: none; transition: color 150ms ease-out; color: #fff; }
+#header ul.nav .main-menu .nav-sub li a:hover { color: #b99a74; }
+
+/*only fullpage*/
+#header .logo.origin { display: block; }
+#header .logo.light { display: none; }
+#header:hover .logo.origin { display: block !important; }
+#header:hover .logo.light { display: none !important; }
+body.light-mode #header .logo.origin { display: none; }
+body.light-mode #header .logo.light { display: block; }
+body.light-mode #header ul.nav .main-menu a,
+body.mixed-mode #header ul.nav .main-menu a { color: #111; }
+body.light-mode #header:hover ul.nav .main-menu a,
+body.mixed-mode #header:hover ul.nav .main-menu a { color: #fefefe; }
+body.light-mode #header .open-btn span,
+body.mixed-mode #header .open-btn span { color: #111; }
+body.light-mode #header:hover .open-btn span,
+body.mixed-mode #header:hover .open-btn span { color: #fefefe; }
+body.bg-mode #header { background-color: #4b4b4b; }
+
+/*responsive*/
+@media screen and (min-width: 1001px) and (max-width: 1520px) {
+  #wrap{max-width: 1520px;}
+  
+  #header .logo { left: 5%; }
+  #header ul.nav { right: 5%; }
+  #header ul.nav .main-menu a { font-size: 16px; }
+  #header ul.nav .main-menu .nav-sub li a { font-size: 14px; }
+    
 }
+    
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  #wrap{max-width: 1000px;}
 
-#header.scrolled {
-  /* background: rgba(248, 245, 240, 0.95); */
-  background: #fefefe;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(80, 60, 40, 0.1);
+  #header ul.nav .main-menu a { font-size: 16px; }
+  #header ul.nav .main-menu .nav-sub li a { font-size: 14px; }
+
+  #header { height: 60px; }
+  #header:hover { height: 60px; }
+  #header:hover ul.nav .main-menu .nav-sub { opacity: 0; display: none; }
+  #header .logo { left: 5%; }
+  #header .logo img { height: 50px; margin-top: 0; }
+  #header .open-btn { opacity: 1; z-index: 998; }
+  html.open-menu #header .open-btn { right: calc(5% + 220px); }
+  html.open-menu #header .open-btn span:first-child { display: none; }
+  html.open-menu #header .open-btn span:last-child { display: block; }
+  html.open-menu #header .open-bg { opacity: 1; left: 0; }
+  #header .gnb { position: fixed; top: 0; right: 0; width: 240px; height: 100vh; background: #111; transform: translateX(240px); transition: all 250ms ease-out; opacity: 0; }
+  html.open-menu #header .gnb { transform: translateX(0); opacity: 1; }
+  #header .gnb .logo { top: 5%; left: 50%; transform: translateX(-50%); display: block; opacity: 1; }
+  #header .gnb .logo:before { content: ''; position: absolute; top: 141px; left: 50%; width: 160%; height: 2px; background: #fefefe; transform: translateX(-50%); z-index: 9; }
+  #header .gnb .logo img { height: 100px; }
+  #header ul.nav { top: 232px; }
+  #header ul.nav .main-menu { margin: 0 0 40px 40px !important; text-align: left;}
+  #header ul.nav .main-menu:hover:before { display: none; } /*큰박스*/
+  #header ul.nav .main-menu > a:before { bottom: 6px; left: auto; right: -30px; width: 8px; height: 8px; opacity: 1; clip-path: polygon(100% 0, 0 0, 50% 100%); }
+  #header ul.nav .main-menu:hover > a:before { width: 8px; }
+  #header ul.nav .main-menu.open > a:before { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+  #header:hover ul.nav .main-menu .nav-sub { margin-top: 30px; text-align: left; }
+  #header ul.nav .main-menu.open .nav-sub { opacity: 1; display: block;  position: relative; z-index: 9999;}
+  #header ul.nav .main-menu .nav-sub li { margin-bottom: 30px; }
 }
-
-/* 내부 레이아웃 */
-.header-inner {
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 18px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/*responsive end*/
 
 
- .close-btn {
-    display: none;
-  }
-
-/* 로고 */
-
-.logo {font-size: 0;}
-.logo a {
-  font-family: 'Noto Sans KR', serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #333; /* 기본 흰색 (메인화면에서 보이도록) */
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-}
-.logo a img {
-  max-width: 160px;
-  height: auto;
-}
-
-/* 스크롤 시 로고 색상 변경 */
-#header.scrolled .logo a {
-  color: #3b2f27;
-}
-
-/* 메뉴 */
-.nav ul {
-  font-family: 'Noto Sans KR', serif;
-  list-style: none;
-  display: flex;
-  gap: 36px;
-}
-
-.nav a {
-  position: relative;
-  font-size: 1.1rem;
-  color: #333; /* 기본 흰색 */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav a.active {
-  color: #b99a74;
-}
-
-.nav a.active::after {
-  width: 100%;
-}
-
-#header.scrolled .nav a {
-  color: #333;
-}
-
-.nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #b99a74, #8c6b4a);
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.nav a:hover {
-  color: #b99a74;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-
-/* 버튼 */
-.header-btns {
-  display: flex;
-  gap: 10px;
-}
-
-.header-btns button {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 0.9rem;
-  padding: 8px 18px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-
-
-/* 반응형 */
-@media (max-width: 900px) {
-  .nav ul {
-    gap: 24px;
-  }
-}
-
-/* =========================
-   모바일 헤더 반응형
-========================= */
-@media (max-width: 768px) {
-
-  body {
-    padding-top: 55px;
-  }
-
-  .header-inner {
-    padding: 10px 20px;
-  }
-
-  .logo a {
-    font-size: 1.2rem;
-  }
-
-  /* 햄버거 버튼 */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 26px;
-    height: 18px;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    display: block;
-    height: 3px;
-    background: #545151; /* 기본 흰색 */
-    border-radius: 3px;
-    transition: all 0.3s ease;
-  }
-
-  #header.scrolled .menu-toggle span {
-    background: #3b2f27;
-  }
-
-  /* 메뉴 패널 */
-  .nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    /* background: rgba(250, 247, 242, 0.98); */
-    background: #fefefe;
-    backdrop-filter: blur(6px);
-    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.3s ease;
-    z-index: 999;
-  }
-
-  .nav.active {
-    right: 0;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .nav a {
-    font-size: 1.1rem;
-    color: #3b2f27;
-  }
-
-  /* 닫기 버튼 */
-  .close-btn {
-    display: block;
-    position: absolute;
-    top: 16px;
-    right: 18px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #3b2f27;
-    cursor: pointer;
-    transition: color 0.2s ease;
-  }
-
-  .close-btn:hover {
-    color: #8c6b4a;
-  }
-
-  /* 햄버거 애니메이션 */
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-}
+/* 관리자로그인 */
+.admin {display: flex; justify-content: end; align-items: center; position: absolute; top: 10px; right: 5%; font-size: 12px; font-weight: bold; }

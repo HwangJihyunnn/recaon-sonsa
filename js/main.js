@@ -11,45 +11,95 @@ setInterval(() => {
 
 
 
-// 스크롤 시 헤더 변화
-/*  window.addEventListener('scroll', () => {
-    const header = document.getElementById('header');
-    if (window.scrollY > 20) {
-      header.classList.add('scrolled');
+ // header
+  let navList = document.querySelector("header");
+  navList.addEventListener("mouseover", function(){
+  navList.querySelectorAll(".sub-menu").forEach(sub=>{
+      sub.style.height = "165px";
+    });
+  });
+  navList.addEventListener("mouseout", function(){
+  navList.querySelectorAll(".sub-menu").forEach(sub=>{
+      sub.style.height = "0";
+    });
+  });
+
+
+// 모바일 header - Vanilla JS
+let w_w, w_h;
+let re_resize_timer;
+
+function resize() {
+  clearTimeout(re_resize_timer);
+  re_resize_timer = setTimeout(() => {
+    w_w = window.innerWidth;
+    w_h = window.innerHeight;
+
+    const gnb = document.querySelector("#header .gnb");
+    const openBg = document.querySelector("#header .open-bg");
+
+    if (w_w < 1000) {
+      if (gnb) gnb.style.height = `${w_h}px`;
+      if (openBg && openBg.classList.contains("open")) {
+        openBg.style.height = `${w_h}px`;
+      }
     } else {
-      header.classList.remove('scrolled');
+      if (gnb) gnb.removeAttribute("style");
+      document.documentElement.classList.remove("open-menu");
     }
-  }); */
+  }, 100);
+}
 
+// DOM 로드 후
+document.addEventListener("DOMContentLoaded", () => {
+  resize();
 
+  const openTargets = document.querySelectorAll(
+    "#header .open-btn, #header .open-bg"
+  );
+  const openBg = document.querySelector("#header .open-bg");
 
-  // 모바일 메뉴
-  const menuToggle = document.getElementById("menuToggle");
-  const nav = document.getElementById("navMenu");
-  const closeBtn = document.getElementById("closeBtn");
+  openTargets.forEach(el => {
+    el.addEventListener("click", () => {
+      if (w_w < 1000) {
+        resize();
+        document.documentElement.classList.toggle("open-menu");
 
-  menuToggle.addEventListener("click", () => {
-    nav.classList.add("active");
-    menuToggle.classList.add("active");
+        if (openBg) {
+          if (openBg.classList.contains("open")) {
+            openBg.classList.remove("open");
+            openBg.removeAttribute("style");
+          } else {
+            openBg.classList.add("open");
+          }
+        }
+      }
+    });
   });
 
-  closeBtn.addEventListener("click", () => {
-    nav.classList.remove("active");
-    menuToggle.classList.remove("active");
-  });
+  const mainMenus = document.querySelectorAll(
+    "#header ul.nav .main-menu"
+  );
 
-  // 메뉴 컬러 고정
-document.addEventListener("DOMContentLoaded", function() {
-  const navLinks = document.querySelectorAll(".nav a");
-  const currentPath = window.location.pathname.split("/").pop(); // 현재 파일명
-
-  navLinks.forEach(link => {
-    const linkPath = link.getAttribute("href").split("/").pop();
-    if (linkPath === currentPath) {
-      link.classList.add("active");
-    }
+  mainMenus.forEach(menu => {
+    menu.addEventListener("click", () => {
+      if (menu.classList.contains("open")) {
+        menu.classList.remove("open");
+      } else {
+        mainMenus.forEach(m => m.classList.remove("open"));
+        menu.classList.add("open");
+      }
+    });
   });
 });
+
+// window load
+window.addEventListener("load", resize);
+
+// window resize
+window.addEventListener("resize", resize);
+
+
 
 
 // 사업메뉴 탭

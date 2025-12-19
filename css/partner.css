@@ -44,11 +44,10 @@
   filter: brightness(65%); /* 수정됨: 이미지 어둡게 처리해서 글씨 잘 보이게 */
 }
 
+
 /* 모바일 반응형 */
 @media (max-width: 768px) {
-  .page-header {
-    /* padding: 40px 0; */
-  }
+
 
   .page-header h2 {
     font-size: 1.6rem;
@@ -118,10 +117,10 @@
 .cli-big > li > figure > .imgmw-55 {max-width: 55%;}
 .cli-big > li > figure > .imgmw-67 {max-width: 67%;}
 
-.proposal-download {display: flex; justify-content: center; }
 .proposal-download p {
   display: inline-block;
   padding: 20px 40px;
+  margin-top: 50px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-weight: 600;
