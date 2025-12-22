@@ -221,3 +221,87 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+/* 데이터표  */
+/* ===== 처리 실적 테이블 영역 ===== */
+.performance-table-wrap {
+  margin-top: 90px;
+}
+
+.table-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+.table-title span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 8px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.performance-table thead th {
+  background: linear-gradient(135deg, #2f2f2f, #3a3a3a);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.performance-table thead th.highlight-col {
+  background: linear-gradient(135deg, #c9a24d, #b18a3d);
+}
+
+.performance-table tbody td {
+  padding: 16px 14px;
+  font-size: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+}
+
+.performance-table tbody tr:hover {
+  background: #f9fafc;
+}
+
+.performance-table tbody td:first-child {
+  font-weight: 600;
+}
+
+.performance-table .rate {
+  background: rgba(201, 162, 77, 0.12);
+  font-weight: 700;
+  color: #8a6b22;
+}
+
+.performance-table .total-row {
+  background: #f3f4f6;
+  font-weight: 700;
+}
+
+.performance-table .total-row td {
+  border-top: 2px solid #ddd;
+}
+
+.table-desc {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #777;
+}
