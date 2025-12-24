@@ -1,11 +1,34 @@
+// 현재 스크립트의 기준 경로 계산 (GitHub Pages 호환)
+function getBasePath() {
+  const scripts = document.getElementsByTagName('script');
+  for (let script of scripts) {
+    if (script.src && script.src.includes('header.js')) {
+      const scriptPath = script.src;
+      // header.js의 디렉토리까지만 추출
+      const basePath = scriptPath.substring(0, scriptPath.lastIndexOf('/js/'));
+      return basePath || '.';
+    }
+  }
+  return '.';
+}
+
 // 헤더 동적 로드
 function loadHeader() {
-  fetch('/component/header.html')
+  const basePath = getBasePath();
+  
+  fetch(`${basePath}/component/header.html`)
     .then(response => response.text())
     .then(data => {
       const placeholder = document.getElementById('header-placeholder');
       if (placeholder) {
-        placeholder.innerHTML = data;
+        // 경로 치환: header.html 내부의 절대경로를 상대경로로 변환
+        const processedData = data
+          .replace(/href="\/css\//g, `href="${basePath}/css/`)
+          .replace(/href="\/index\.html"/g, `href="${basePath}/index.html"`)
+          .replace(/href="\/subpage\//g, `href="${basePath}/subpage/`)
+          .replace(/src="\/img\//g, `src="${basePath}/img/`);
+        
+        placeholder.innerHTML = processedData;
         
         // DOM 삽입 후 이벤트 리스너 초기화
         initHeaderEvents();
