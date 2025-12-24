@@ -308,3 +308,136 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* 반응형 */
+/* =====================================
+   🔥 컨테이너 고정폭 해제
+===================================== */
+@media (max-width: 1100px) {
+  .container {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 24px;
+  }
+}
+
+/* =====================================
+   페이지 헤더
+===================================== */
+@media (max-width: 768px) {
+  .page-header h2 {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .page-header h2 > span {
+    font-size: 16px;
+  }
+
+  .page-header img {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =====================================
+   섹션 타이틀
+===================================== */
+@media (max-width: 768px) {
+  .container > h3 {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+  }
+
+  .container > h3::before {
+    height: 26px;
+  }
+}
+
+/* =====================================
+   보안 서비스 영역
+===================================== */
+@media (max-width: 1024px) {
+  .security-area {
+    padding: 60px 0;
+  }
+
+  .security-area h3 {
+    font-size: 24px;
+  }
+
+  .security-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .security-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .security-card {
+    padding: 24px 22px;
+  }
+
+  .security-card h4 {
+    font-size: 17px;
+  }
+}
+
+/* =====================================
+   내부 시스템 영역
+===================================== */
+@media (max-width: 1024px) {
+  .admin-system {
+    padding: 70px 0;
+  }
+
+  .admin-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .admin-desc {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-system h3 {
+    font-size: 24px;
+  }
+
+  .feature-box {
+    padding: 22px 20px;
+  }
+
+  .feature-box h4 {
+    font-size: 16px;
+  }
+
+  .feature-box p {
+    font-size: 13px;
+  }
+}
+
+/* =====================================
+   관리자 이미지 영역
+===================================== */
+@media (max-width: 600px) {
+  .admin-image img {
+    border-radius: 14px;
+  }
+
+  .admin-badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}

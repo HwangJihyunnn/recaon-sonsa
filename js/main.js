@@ -38,95 +38,29 @@ window.onload = () => {
   });
 };
 
+// 헤더
+  const openBtn = document.querySelector('.open-btn');
+  const bg = document.querySelector('.open-bg');
+  const menus = document.querySelectorAll('.main-menu > a');
 
-
- // header
-  let navList = document.querySelector("header");
-  navList.addEventListener("mouseover", function(){
-  navList.querySelectorAll(".sub-menu").forEach(sub=>{
-      sub.style.height = "165px";
-    });
-  });
-  navList.addEventListener("mouseout", function(){
-  navList.querySelectorAll(".sub-menu").forEach(sub=>{
-      sub.style.height = "0";
-    });
+  openBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('open-menu');
   });
 
+  bg.addEventListener('click', () => {
+    document.documentElement.classList.remove('open-menu');
+  });
 
-// 모바일 header - Vanilla JS
-let w_w, w_h;
-let re_resize_timer;
-
-function resize() {
-  clearTimeout(re_resize_timer);
-  re_resize_timer = setTimeout(() => {
-    w_w = window.innerWidth;
-    w_h = window.innerHeight;
-
-    const gnb = document.querySelector("#header .gnb");
-    const openBg = document.querySelector("#header .open-bg");
-
-    if (w_w < 1000) {
-      if (gnb) gnb.style.height = `${w_h}px`;
-      if (openBg && openBg.classList.contains("open")) {
-        openBg.style.height = `${w_h}px`;
-      }
-    } else {
-      if (gnb) gnb.removeAttribute("style");
-      document.documentElement.classList.remove("open-menu");
-    }
-  }, 100);
-}
-
-// DOM 로드 후
-document.addEventListener("DOMContentLoaded", () => {
-  resize();
-
-  const openTargets = document.querySelectorAll(
-    "#header .open-btn, #header .open-bg"
-  );
-  const openBg = document.querySelector("#header .open-bg");
-
-  openTargets.forEach(el => {
-    el.addEventListener("click", () => {
-      if (w_w < 1000) {
-        resize();
-        document.documentElement.classList.toggle("open-menu");
-
-        if (openBg) {
-          if (openBg.classList.contains("open")) {
-            openBg.classList.remove("open");
-            openBg.removeAttribute("style");
-          } else {
-            openBg.classList.add("open");
-          }
-        }
+  menus.forEach(menu => {
+    menu.addEventListener('click', e => {
+      if (window.innerWidth <= 1000) {
+        e.preventDefault();
+        menu.parentElement.classList.toggle('open');
       }
     });
   });
 
-  const mainMenus = document.querySelectorAll(
-    "#header ul.nav .main-menu"
-  );
 
-  mainMenus.forEach(menu => {
-    menu.addEventListener("click", () => {
-      if (menu.classList.contains("open")) {
-        menu.classList.remove("open");
-      } else {
-        mainMenus.forEach(m => m.classList.remove("open"));
-        menu.classList.add("open");
-      }
-    });
-  });
-});
-
-// window load
-window.addEventListener("load", resize);
-
-// window resize
-window.addEventListener("resize", resize);
 
 
 

@@ -433,3 +433,134 @@ step-icon:hover {
 .pf-table tr:last-child td {
     border-bottom: none;
 }
+
+
+/* 반응형 */
+/* ===============================
+   🔥 핵심 FIX – 구조 안정화
+================================ */
+
+/* container 고정폭 제거 */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 40px 24px;
+  }
+}
+
+/* ===============================
+   탭 메뉴 구조 FIX
+================================ */
+
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+}
+
+.tab-btn {
+  width: auto;          /* ❗ 100% 제거 */
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .tab-menu {
+    gap: 10px;
+  }
+
+  .tab-btn {
+    flex: 1 1 calc(33.333% - 10px);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .tab-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+}
+
+/* ===============================
+   탭 콘텐츠 FIX
+================================ */
+
+.tab-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ===============================
+   이미지 영역 FIX
+================================ */
+
+.process-text {
+  display: flex;        /* ❗ 빠져있던 핵심 */
+  justify-content: center;
+  width: 100%;
+}
+
+.process-left {
+  width: 100%;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .process-text {
+    flex-direction: column;
+  }
+
+  .img img {
+    height: 220px;
+  }
+
+  .overlay p {
+    width: 100%;
+    padding: 0 16px;
+    text-align: center;
+  }
+}
+
+/* ===============================
+   프로세스 흐름 FIX
+================================ */
+
+.process-flow {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .process-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+/* ===============================
+   테이블 모바일 대응
+================================ */
+
+@media (max-width: 768px) {
+  .pf-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

@@ -33,7 +33,7 @@
 
   </head>
 <body>
-        <header id="header">
+    <header id="header">
       <a class="logo" href="../index.html"><img src="../img/h_logo.png" alt="리카온로고"></a>
       <div class="open-btn">
         <span class="material-symbols-outlined">menu</span>
@@ -81,7 +81,6 @@
     </header>
     <!-- //header -->
     <main>
-        <!-- <div class="banner"><h3>기업소개</h3></div> -->
       <section class="page-header">
         <div class="inner">
           <h2><span>contact</span><br>문의하기</h2>
@@ -89,9 +88,8 @@
         </div>
       </section>
       <div class="container">
-                <div class="faq-section">
+        <div class="faq-section">
           <h4>자주 묻는 질문</h4>
-
           <div class="faq-list">
             <div class="faq-item">
               <button class="faq-question">
@@ -157,88 +155,77 @@
             </div>
           </div>
         </div>
-        <div class="location-inner">
-          <div class="location-info">
-            <h4>본사 오시는 길</h4>
-            <p class="address">- 서울 금천구 가산디지털1로 70 호서대벤처타워 806호</p>
-            <div class="transport">
-              <h3>대중교통 이용 시</h3>
-              <ul>
-                <li><strong>지하철</strong> : 가산디지털단지역(1호선, 7호선) 또는 독산역(1호선)</li>
-                <li><strong>버스</strong> :
-                  <ul class="bus-list">
-                    <li>- 일반버스 21, 571, 652, 5536</li>
-                    <li>- 간선버스 503, 571</li>
-                    <li>- 지선버스 5537, 5616</li>
-                  </ul>
-                </li>
-              </ul>
+          <div class="location-inner">
+            <div class="location-info">
+              <h4>본사 오시는 길</h4>
+              <p class="address">- 서울 금천구 가산디지털1로 70 호서대벤처타워 806호</p>
+              <div class="transport">
+                <h3>대중교통 이용 시</h3>
+                <ul>
+                  <li><strong>지하철</strong> : 가산디지털단지역(1호선, 7호선) 또는 독산역(1호선)</li>
+                  <li><strong>버스</strong> :
+                    <ul class="bus-list">
+                      <li>- 일반버스 21, 571, 652, 5536</li>
+                      <li>- 간선버스 503, 571</li>
+                      <li>- 지선버스 5537, 5616</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="nearby">
+                <h3>주변 안내</h3>
+                <p>가산디지털단지 중심부에 위치하여, 가산디지털역과 독산역 사이에 위치해있습니다.<br>바로 건너편에 구로세관이 있습니다.</p>
+              </div>
             </div>
-            <div class="nearby">
-              <h3>주변 안내</h3>
-              <p>가산디지털단지 중심부에 위치하여, 가산디지털역과 독산역 사이에 위치해있습니다.<br>바로 건너편에 구로세관이 있습니다.</p>
+            <div class="location-map">
+              <iframe src="https://www.google.com/maps?q=서울 금천구 가산디지털1로 70&output=embed"
+                width="100%"
+                height="400"
+                style="border:0; border-radius:20px;"
+                allowfullscreen=""
+                  loading="lazy">
+              </iframe>
             </div>
           </div>
-          <div class="location-map">
-            <iframe src="https://www.google.com/maps?q=서울 금천구 가산디지털1로 70&output=embed"
-              width="100%"
-              height="400"
-              style="border:0; border-radius:20px;"
-              allowfullscreen=""
-                loading="lazy">
-            </iframe>
+          <div class="content">
+            <section class="content-left">
+              <h3>리카온손해사정(주)</h3>
+              <p>아래번호로 문의 또는 이메일 주시면 빠르게 답변드리겠습니다.<br>사고 접수시 담당자님 명함 및 사고접수지 아래 이메일 또는 팩스로 첨부 부탁드립니다. </p>
+              <span>대표전화: 02-757-9551</span><br>
+              <span>팩스번호: 02-757-9554</span><br>
+              <span>이메일: <a href="mailto:sonsa2@recaon.com">sonsa2@recaon.com</a></span>
+            </section>
+            <section class="contact-section">
+              <form id="gform"
+                action="https://script.google.com/macros/s/AKfycbwn3riVjcbaUdM5eZBnbJ0ro5Px6h5rbrI0R0WjXJyuScka_dqYnbNIv1JN1CVLmTbC/exec"
+                method="post"
+                enctype="multipart/form-data"
+                class="contact-form">
+                <div class="input-group">
+                  <input type="text" name="company" required>
+                  <label>법인명</label>
+                </div>
+                <div class="input-group">
+                  <input type="text" name="manager" required>
+                  <label>담당자</label>
+                </div>
+                <div class="input-group">
+                  <input type="tel" name="phone" required>
+                  <label>핸드폰번호</label>
+                </div>
+                <div class="input-group">
+                  <input type="email" name="email" required>
+                  <label>이메일</label>
+                </div>
+                <div class="input-group">
+                  <textarea name="accident" rows="5" required></textarea>
+                  <label>문의 내용</label>
+                </div>
+                <button type="submit">문의 보내기</button>
+              </form>
+            </section>
           </div>
-        </div>
-        <div class="content">
-          <section class="content-left">
-            <h3>리카온손해사정(주)</h3>
-            <p>아래번호로 문의 또는 이메일 주시면 빠르게 답변드리겠습니다.<br>사고 접수시 담당자님 명함 및 사고접수지 아래 이메일 또는 팩스로 첨부 부탁드립니다. </p>
-            <span>대표전화: 02-757-9551</span><br>
-            <span>팩스번호: 02-757-9554</span><br>
-            <span>이메일: <a href="mailto:sonsa2@recaon.com">sonsa2@recaon.com</a></span>
-          </section>
-          <section class="contact-section">
-            <!-- <h2>문의하기</h2> -->
-            <form id="gform"
-              action="https://script.google.com/macros/s/AKfycbwn3riVjcbaUdM5eZBnbJ0ro5Px6h5rbrI0R0WjXJyuScka_dqYnbNIv1JN1CVLmTbC/exec"
-              method="post"
-              enctype="multipart/form-data"
-              class="contact-form">
-              <div class="input-group">
-                <input type="text" name="company" required>
-                <label>법인명</label>
-              </div>
-              <div class="input-group">
-                <input type="text" name="manager" required>
-                <label>담당자</label>
-              </div>
-              <div class="input-group">
-                <input type="tel" name="phone" required>
-                <label>핸드폰번호</label>
-              </div>
-              <div class="input-group">
-                <input type="email" name="email" required>
-                <label>이메일</label>
-              </div>
-              <!-- <div class="input-group">
-                <input type="text" name="accident_number" required>
-                <label>귀사사고번호</label>
-              </div> -->
-              <div class="input-group">
-                <textarea name="accident" rows="5" required></textarea>
-                <label>문의 내용</label>
-              </div>
-              <!-- <div class="input-group">
-                <input type="text" name="location" required>
-                <label>장소</label>
-              </div> -->
-              <button type="submit">문의 보내기</button>
-            </form>
-          </section>
-        </div>
       </div>
-      
-          
     </main>
     <!-- //main content -->
     <footer class="site-footer">

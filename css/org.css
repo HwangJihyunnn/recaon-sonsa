@@ -298,3 +298,139 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* 반응형 */
+/* =====================================
+   🔥 전체 레이아웃 핵심 FIX
+===================================== */
+
+/* container 고정폭 제거 */
+@media (max-width: 1100px) {
+  .container {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 24px;
+  }
+}
+
+/* =====================================
+   페이지 헤더
+===================================== */
+
+@media (max-width: 768px) {
+  .page-header h2 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .page-header h2 > span {
+    font-size: 16px;
+  }
+
+  .page-header img {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =====================================
+   컨테이너 타이틀
+===================================== */
+
+@media (max-width: 768px) {
+  .container > h3,
+  .talent-section > h3 {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+  }
+
+  .container > h3::before,
+  .talent-section > h3::before {
+    height: 26px;
+  }
+
+  .container p {
+    font-size: 15px;
+  }
+}
+
+/* =====================================
+   조직도 반응형
+===================================== */
+
+@media (max-width: 900px) {
+  .org-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .org-box {
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .org-section {
+    margin: 60px auto;
+  }
+
+  .org-section h4,
+  .place h4 {
+    font-size: 22px;
+    gap: 14px;
+  }
+
+  .org-box {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .org-line.vertical {
+    height: 20px;
+  }
+}
+
+/* =====================================
+   인재상 카드
+===================================== */
+
+@media (max-width: 900px) {
+  .talent-list.modern {
+    gap: 24px;
+  }
+
+  .talent-card {
+    padding: 40px 24px 28px;
+  }
+
+  .talent-card h5 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .talent-card {
+    padding: 36px 20px 26px;
+  }
+
+  .talent-num {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+}
+
+/* =====================================
+   지점 이미지
+===================================== */
+
+@media (max-width: 768px) {
+  .place img {
+    max-width: 100%;
+  }
+}

@@ -132,3 +132,128 @@
   background: #222;
   color: #fff;
 }
+
+
+/* 반응형 */
+/* =====================================
+   🔥 컨테이너 고정폭 해제
+===================================== */
+@media (max-width: 1100px) {
+  .container {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 24px;
+  }
+}
+
+/* =====================================
+   페이지 헤더
+===================================== */
+@media (max-width: 768px) {
+  .page-header h2 {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .page-header h2 > span {
+    font-size: 16px;
+  }
+
+  .page-header img {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =====================================
+   섹션 타이틀
+===================================== */
+@media (max-width: 768px) {
+  .container > h3 {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+  }
+
+  .container > h3::before {
+    height: 26px;
+  }
+}
+
+/* =====================================
+   파트너 섹션 여백 조정
+===================================== */
+@media (max-width: 1024px) {
+  .partners-section {
+    padding: 70px 0;
+  }
+
+  .partners-part {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* =====================================
+   CLIENT 영역 (로고 그리드)
+===================================== */
+@media (max-width: 1200px) {
+  .cli-big {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 900px) {
+  .client {
+    padding: 100px 0;
+  }
+
+  .cli-big {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding-bottom: 80px;
+  }
+
+  .cli-big > li {
+    height: 140px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cli-big {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cli-big > li {
+    height: 120px;
+  }
+
+  .cli-big > li > figure > img {
+    max-width: 40%;
+  }
+}
+
+/* =====================================
+   다운로드 버튼
+===================================== */
+@media (max-width: 768px) {
+  .proposal-download p {
+    padding: 16px 28px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proposal-download p {
+    width: 100%;
+    text-align: center;
+  }
+}

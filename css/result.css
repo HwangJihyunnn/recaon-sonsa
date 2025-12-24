@@ -305,3 +305,143 @@
   font-size: 13px;
   color: #777;
 }
+
+/* 반응형 */
+/* =====================================
+   🔥 컨테이너 고정폭 해제
+===================================== */
+@media (max-width: 1100px) {
+  .container {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 24px;
+  }
+}
+
+/* =====================================
+   페이지 헤더
+===================================== */
+@media (max-width: 768px) {
+  .page-header h2 {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  .page-header h2 > span {
+    font-size: 16px;
+  }
+
+  .page-header img {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =====================================
+   섹션 타이틀
+===================================== */
+@media (max-width: 768px) {
+  .container > h3 {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+  }
+
+  .container > h3::before {
+    height: 26px;
+  }
+}
+
+/* =====================================
+   주요 성과 영역
+===================================== */
+@media (max-width: 1024px) {
+  .performance-section {
+    margin: 80px 0;
+  }
+
+  .performance-header h4 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  .performance-visual {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .graph-box {
+    padding: 32px 26px;
+  }
+
+  .graph-text h5 {
+    font-size: 22px;
+  }
+}
+
+/* =====================================
+   그래프 영역
+===================================== */
+@media (max-width: 600px) {
+  .bar-graph {
+    gap: 14px;
+    height: 180px;
+    justify-content: center;
+  }
+
+  .bar {
+    width: 36px;
+  }
+
+  .graph-desc {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+/* =====================================
+   하단 수치 카드
+===================================== */
+@media (max-width: 900px) {
+  .performance-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .performance-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-card strong {
+    font-size: 26px;
+  }
+}
+
+/* =====================================
+   데이터 테이블
+===================================== */
+@media (max-width: 768px) {
+  .performance-table-wrap {
+    margin-top: 60px;
+  }
+
+  .table-title {
+    font-size: 22px;
+  }
+
+  .table-scroll {
+    border-radius: 10px;
+  }
+
+  .table-desc {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
