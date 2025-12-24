@@ -38,43 +38,6 @@ window.onload = () => {
   });
 };
 
-// 헤더 모바일 메뉴
-const openBtn = document.querySelector('.open-btn');
-const bg = document.querySelector('.open-bg');
-const menuLinks = document.querySelectorAll('#header .main-menu > a');
-
-openBtn.addEventListener('click', () => {
-  document.documentElement.classList.toggle('open-menu');
-});
-
-bg.addEventListener('click', () => {
-  document.documentElement.classList.remove('open-menu');
-});
-
-// 모바일에서만 하위메뉴 열기
-menuLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    if (window.innerWidth <= 1000) {
-      e.preventDefault(); // ✅ 페이지 이동 막기
-
-      const parent = link.parentElement;
-
-      // 다른 메뉴 닫고 싶으면 이 줄 유지
-      document.querySelectorAll('#header .main-menu')
-        .forEach(menu => {
-          if (menu !== parent) menu.classList.remove('open');
-        });
-
-      parent.classList.toggle('open');
-    }
-  });
-});
-
-
-
-
-
-
 
 // 사업메뉴 탭
 

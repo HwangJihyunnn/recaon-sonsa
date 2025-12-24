@@ -1,0 +1,170 @@
+/* ========================================
+   Header - Mobile 스타일 (max-width: 1000px)
+   ======================================== */
+
+/* PC hover 효과 완전 차단 */
+#header,
+#header:hover,
+#header:active,
+#header:focus {
+  height: 60px !important;
+  background: #fefefe !important;
+  transition: none !important;
+}
+
+#header:hover ul.nav > .main-menu .nav-sub {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+#header ul.nav .main-menu,
+#header ul.nav .main-menu:hover,
+#header ul.nav .main-menu:active {
+  color: #fff !important;
+  background: none !important;
+}
+
+#header ul.nav .main-menu > a:before {
+  display: none !important;
+}
+
+#header .gnb:hover {
+  color: inherit !important;
+}
+
+/* 로고 */
+#header .logo {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#header .logo img {
+  height: 40px;
+  margin: 0;
+}
+
+/* 햄버거 버튼 */
+#header .open-btn {
+  opacity: 1;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+#header .open-btn span {
+  color: #111;
+  pointer-events: none;
+}
+
+html.open-menu #header .open-btn span:first-child {
+  display: none;
+}
+
+html.open-menu #header .open-btn span:last-child {
+  display: block;
+  color: #fff !important;
+}
+
+/* 배경 */
+#header .open-bg {
+  z-index: 998;
+}
+
+html.open-menu #header .open-bg {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 사이드 메뉴 */
+#header .gnb {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: #111;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+  padding: 100px 0 0;
+  z-index: 999;
+}
+
+html.open-menu #header .gnb {
+  transform: translateX(0);
+}
+
+/* gnb 내부 로고 숨김 */
+#header .gnb .logo {
+  display: none;
+}
+
+/* 메뉴 리스트 */
+#header ul.nav {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+#header ul.nav .main-menu {
+  margin: 0 !important;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#header ul.nav .main-menu > a {
+  font-size: 16px;
+  color: #fff !important;
+  display: block;
+}
+
+#header ul.nav .main-menu > a:hover {
+  color: #fff !important;
+}
+
+/* 서브 메뉴 (아코디언) */
+#header ul.nav .nav-sub {
+  display: none;
+  margin-top: 12px !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+  padding: 0;
+  list-style: none;
+}
+
+#header ul.nav .main-menu.open .nav-sub {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#header ul.nav .nav-sub li {
+  margin: 0 auto 12px auto !important;
+  display: block !important;
+  width: 100% !important;
+  visibility: visible !important;
+  list-style: none;
+}
+
+#header ul.nav .nav-sub li a {
+  font-size: 14px;
+  display: block;
+  color: #888 !important;
+  text-align: center;
+  padding: 6px 0;
+  transition: none !important;
+}
+
+#header ul.nav .nav-sub li a:hover,
+#header ul.nav .nav-sub li a:active {
+  color: #888 !important;
+}
+
+#header ul.nav .nav-sub li br {
+  display: none;
+}
+
+/* 관리자 로그인 숨김 */
+.admin {
+  display: none;
+}
