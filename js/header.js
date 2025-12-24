@@ -13,7 +13,7 @@ function getBasePath() {
 }
 
 // 헤더 동적 로드
-function loadHeader() {
+function loadFooter() {
   const basePath = getBasePath();
   
   fetch(`${basePath}/component/header.html`)
@@ -31,14 +31,14 @@ function loadHeader() {
         placeholder.innerHTML = processedData;
         
         // DOM 삽입 후 이벤트 리스너 초기화
-        initHeaderEvents();
+        initFooterEvents();
       }
     })
     .catch(error => console.error('헤더 로드 에러:', error));
 }
 
 // 헤더 이벤트 초기화
-function initHeaderEvents() {
+function initFooterEvents() {
   // 중복 실행 방지
   if (window.headerMenuInitialized) return;
   
@@ -94,8 +94,8 @@ function initHeaderEvents() {
 
 // DOM 로드 완료시 헤더 로드
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadHeader);
+  document.addEventListener('DOMContentLoaded', loadFooter);
 } else {
-  loadHeader();
+  loadFooter();
 }
 

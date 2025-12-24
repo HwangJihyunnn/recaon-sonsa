@@ -57,31 +57,6 @@ tabBtns.forEach(btn => {
   });
 });
 
-
-// footer 팝업 
-document.querySelectorAll('.bottom-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = e.target.getAttribute('data-popup');
-    document.getElementById(`popup-${target}`).style.display = 'flex';
-  });
-});
-
-document.querySelectorAll('.popup-close').forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.target.closest('.popup').style.display = 'none';
-  });
-});
-
-document.querySelectorAll('.popup').forEach(popup => {
-  popup.addEventListener('click', e => {
-    // 바깥 영역 클릭 시 닫기
-    if (e.target === popup) popup.style.display = 'none';
-  });
-});
-
-
-
 // 문의하기 - 자주하는 질문
 const faqItems = document.querySelectorAll(".faq-item");
 
