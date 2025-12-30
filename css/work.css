@@ -525,7 +525,12 @@ step-icon:hover {
     width: 100%;
     padding: 0 16px;
     text-align: center;
+    font-size: 14px;
+    overflow: scroll;
   }
+  .img > .overlay > p > .over-bold {
+    font-size: 18px;
+}
 }
 
 /* ===============================
@@ -562,5 +567,7 @@ step-icon:hover {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+    padding: 0 16px;
   }
+
 }

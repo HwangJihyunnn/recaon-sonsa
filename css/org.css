@@ -47,7 +47,9 @@
 /* 모바일 반응형 */
 @media (max-width: 768px) {
   .page-header {
-    /* padding: 40px 0; */
+    padding: 40px 0;
+    border-bottom: none;
+    background: none;
   }
 
   .page-header h2 {

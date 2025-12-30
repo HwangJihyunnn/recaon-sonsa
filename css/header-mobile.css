@@ -164,7 +164,3 @@ html.open-menu #header .gnb {
   display: none;
 }
 
-/* 관리자 로그인 숨김 */
-.admin {
-  display: none;
-}

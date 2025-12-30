@@ -47,7 +47,9 @@
 /* 모바일 반응형 */
 @media (max-width: 768px) {
   .page-header {
-    /* padding: 40px 0; */
+    padding: 40px 0;
+    border-bottom: none;
+    background: none;
   }
 
   .page-header h2 {
@@ -120,7 +122,7 @@
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .content-left {
-    padding: 40px 28px;
+    /* padding: 40px 28px; */
   }
 
   .content-left h3 {
@@ -243,7 +245,7 @@
 @media (max-width: 600px) {
   .contact-section {
     padding: 40px 20px;
-    margin: 60px 16px;
+    /* margin: 60px 16px; */
   }
 
   .contact-section h2 {
@@ -450,12 +452,13 @@
     gap: 60px;
   }
 
-  .content-left,
-  .contact-section {
+  .content-left {
     width: 100%;
     max-width: 100%;
   }
-
+  .contact-section {
+    width: 100%;
+  }
   .location-inner {
     flex-direction: column;
     gap: 40px;
@@ -525,4 +528,8 @@
     padding: 14px;
     border-radius: 10px;
   }
+  .content-left, .contact-section {
+    width: 100%;
+  }
+
 }

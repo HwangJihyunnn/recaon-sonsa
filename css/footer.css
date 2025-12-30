@@ -206,3 +206,95 @@ footer {background: #2e2e2e;}
 .bottom-links a {
   cursor: pointer;
 }
+
+
+/* =========================
+   FOOTER MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .site-footer {
+    padding: 40px 16px 20px;
+    text-align: left;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* 브랜드 */
+  .footer-brand .brand-title {
+    font-size: 1.4rem;
+  }
+
+  .footer-brand .brand-sub {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* 섹션 제목 */
+  .footer-col h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  /* 링크 */
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 6px;
+  }
+
+  /* 연락처 */
+  .footer-contact p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* 패밀리 사이트 */
+  .footer-family {
+    width: 100%;
+  }
+
+  .footer-family form {
+    align-items: flex-start;
+  }
+
+  .footer-family label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-family select {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* 하단 영역 */
+  .footer-bottom {
+    margin-top: 20px;
+    padding-top: 12px;
+  }
+
+  .bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .bottom-inner p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .bottom-links a {
+    font-size: 0.8rem;
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
