@@ -26,7 +26,8 @@ footer {background: #2e2e2e;}
 /* 브랜드 컬럼 */
 .footer-brand .brand-title {
   font-family: 'Noto Serif KR', serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
   color: #f7efe6;
   margin-bottom: 8px;
   letter-spacing: 0.4px;
@@ -225,7 +226,7 @@ footer {background: #2e2e2e;}
 
   /* 브랜드 */
   .footer-brand .brand-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .footer-brand .brand-sub {
