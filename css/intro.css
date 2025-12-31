@@ -249,17 +249,18 @@
 }
 
 .timeline-item:nth-child(even) .timeline-content::after {
-  content: "";
+ content: "";
   position: absolute;
   top: 28px;
-  left: -40px;
+  left: -42px;
   width: 12px;
   height: 12px;
-  background: #9f4f4f;
+  background: #fff;
   border-radius: 50%;
   border-top: 1px solid rgba(200, 185, 160, 0.4);
-  border-left: 1px solid rgba(200, 185, 160, 0.4);
+  border-right: 1px solid rgba(200, 185, 160, 0.4);
   transform: rotate(45deg);
+  border: 3px solid #9f4f4f;
 }
 
 /* 날짜 */
@@ -429,9 +430,10 @@
   .timeline-item:nth-child(odd) .timeline-content::after,
   .timeline-item:nth-child(even) .timeline-content::after {
     left: -10px;
-    right: auto;
+    right: -10px;
     top: 20px;
     transform: rotate(45deg);
+    text-align: left;
   }
 
   .timeline-date {
@@ -442,6 +444,7 @@
   .timeline-event {
     font-size: 0.9rem;
     line-height: 1.5;
+    text-align: left;
   }
 }
 
