@@ -6,16 +6,12 @@
 /* ---------- 페이지 헤더 배너 ---------- */
 .page-header {
   position: relative;
-  background: #f5f9ff; /* 연한 화이트/블루톤 */
+  background: #f5f9ff;
   border-bottom: 1px solid #dbe9f8;
-  /* padding: 60px 0; */
   text-align: center;
 }
 
 .page-header .inner {
- /*  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px; */
   position: relative;
 }
 
@@ -30,8 +26,8 @@
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
-    z-index: 2; /* 이미지 위로 올라오도록 */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
+    z-index: 2; 
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); 
 }
 .page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0);font-family: 'Noto Serif KR', sans-serif;}
 
@@ -41,7 +37,7 @@
   max-height: 400px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  filter: brightness(65%); /* 수정됨: 이미지 어둡게 처리해서 글씨 잘 보이게 */
+  filter: brightness(65%); 
 }
 
 

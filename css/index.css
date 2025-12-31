@@ -62,13 +62,13 @@ html, body {
 
 /* ===== 텍스트 영역 ===== */
 .out-text {
-  position: relative; /* ✅ 절대 위치 → 상대 위치로 변경 */
+  position: relative; 
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* 화면 가운데 */
+  height: 100vh; 
   text-align: center;
   color: #fff;
   width: 90%;
@@ -195,7 +195,7 @@ footer {
 }
 
 .stat-item.total strong {
-  color: #b58a2f; /* 골드 포인트 */
+  color: #b58a2f; 
 }
 
 

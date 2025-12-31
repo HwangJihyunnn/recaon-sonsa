@@ -29,8 +29,8 @@
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
-    z-index: 2; /* 이미지 위로 올라오도록 */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
+    z-index: 2;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); 
 }
 .page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; font-weight: bold; color: rgb(255, 174, 0); font-family: 'Noto Serif KR', sans-serif;}
 
@@ -40,7 +40,7 @@
   max-height: 400px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  filter: brightness(65%); /* 수정됨: 이미지 어둡게 처리해서 글씨 잘 보이게 */
+  filter: brightness(65%);
 }
 
 /* 모바일 반응형 */
@@ -59,12 +59,9 @@
 
 
 /* ---------- 컨테이너 ---------- */
-
-
 /* 모바일 반응형 */
 @media (max-width: 768px) {
   .page-header {
-    /* padding: 40px 0; */
   }
 
   .page-header h2 {
@@ -75,9 +72,6 @@
     max-height: 180px;
   }
 }
-
-
-
 
 /* 업무 프로세스 */
 .process-flow {
@@ -175,13 +169,11 @@ step-icon:hover {
   margin-right: 10px;
 }
 
-
-
 .work-text {
     border-radius: 10px;
     font-size: 16px;
     line-height: 1.75;
-    color: #4b3d33; /* 진한 브라운 텍스트 */
+    color: #4b3d33;
     font-weight: 400;
     max-width: 750px; 
     text-align: left;
@@ -190,7 +182,7 @@ step-icon:hover {
 .work-text > span {
     font-size: 20px;
     font-weight: 700;
-    color: #7a5a3c; /* 강조된 브라운 */
+    color: #7a5a3c;
 }
 
 .work-text br {
@@ -243,8 +235,6 @@ step-icon:hover {
   color: #f5f3f0;
   font-size: 18px;
   font-weight: 600;
-  /* opacity: 0; */
-  /* transform: translateY(10px); */
   transition: opacity .35s ease, transform .35s ease;
 }
 
@@ -366,7 +356,7 @@ step-icon:hover {
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #6b4e3d; /* 깊은 브라운 */
+    color: #6b4e3d; 
     letter-spacing: 0.5px;
 }
 
@@ -383,7 +373,7 @@ step-icon:hover {
 
 /* 헤더 */
 .pf-table th {
-    background: linear-gradient(#d9c7b3, #e8ddcf); /* 베이지 그라데이션 */
+    background: linear-gradient(#d9c7b3, #e8ddcf); 
     padding: 16px;
     text-align: center;
     font-weight: 700;
@@ -406,7 +396,7 @@ step-icon:hover {
 
 /* 줄마다 은은한 배경 */
 .pf-table tr:nth-child(even) td {
-    background: #faf6f2; /* 부드러운 연베이지 */
+    background: #faf6f2; 
 }
 
 /* 첫 번째 열(카테고리) 강조 */
@@ -460,7 +450,7 @@ step-icon:hover {
 }
 
 .tab-btn {
-  width: auto;          /* ❗ 100% 제거 */
+  width: auto;
   flex: 1;
   margin-bottom: 0;
 }
@@ -502,7 +492,7 @@ step-icon:hover {
 ================================ */
 
 .process-text {
-  display: flex;        /* ❗ 빠져있던 핵심 */
+  display: flex;
   justify-content: center;
   width: 100%;
 }

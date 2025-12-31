@@ -6,16 +6,13 @@
 /* ---------- 페이지 헤더 배너 ---------- */
 .page-header {
   position: relative;
-  background: #f5f9ff; /* 연한 화이트/블루톤 */
+  background: #f5f9ff; 
   border-bottom: 1px solid #dbe9f8;
-  /* padding: 60px 0; */
   text-align: center;
 }
 
 .page-header .inner {
- /*  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px; */
+
   position: relative;
 }
 
@@ -30,8 +27,8 @@
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
-    z-index: 2; /* 이미지 위로 올라오도록 */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* 수정됨: 글씨 선명하게 */
+    z-index: 2; 
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); 
 }
 .page-header h2 > span {display: inline-block; margin-bottom: 10px; font-size: 24px; text-align: bold; color: rgb(255, 174, 0); font-family: 'Noto Serif KR', sans-serif;}
 
@@ -41,7 +38,7 @@
   max-height: 400px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  filter: brightness(65%); /* 수정됨: 이미지 어둡게 처리해서 글씨 잘 보이게 */
+  filter: brightness(65%);
 }
 
 /* 모바일 반응형 */
@@ -53,10 +50,6 @@
   width: 1000px;
   margin: 60px auto;
   padding: 60px 50px;
- /*  background: #fdfcfb;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid #e6dfd5; */
   text-align: center;
 }
 
@@ -70,15 +63,6 @@
   position: relative;
 }
 
-/* .container > h3::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #b99a74, #8c6b4a);
-  margin: 20px auto 0;
-  border-radius: 2px;
-} */
 
 /* ---------- 카드 박스 ---------- */
 .com-box {
@@ -277,7 +261,6 @@
 }
 
   
-/* .timeline-date {background: linear-gradient(to right, #b99a74, #d9c1a1); color: #fff;} */
 
 /* 이벤트 내용 */
 .timeline-event {
@@ -304,20 +287,19 @@
 .icon {
   font-family: 'Material Symbols Outlined';
   font-size: 32px;
-  color: #fff; /* 브라운 포인트 */
+  color: #fff; 
   width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: #b99a74; */
   background: linear-gradient(to right, #b99a74, #d9c1a1);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
   margin: 0 auto 10px;
   transition: all 0.3s ease;
-  line-height: 0; /* 아이콘 세로 중심 딱 맞추기 */
+  line-height: 0;
 }
 
 

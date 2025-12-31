@@ -1,4 +1,3 @@
-/* footer.css - 브라운 메인 + 골드/딥블루 포인트 */
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Pretendard:wght@400;500;600&display=swap');
 
@@ -6,8 +5,7 @@ footer {background: #2e2e2e;}
 
 
 .site-footer {
-  /* background: linear-gradient(180deg, #3b2f27 0%, #342a23 100%); */
-  color: #f2e9df; /* 연한 아이보리 텍스트 */
+  color: #f2e9df; 
   padding: 48px 16px 20px;
   font-family: 'Pretendard', 'Noto Serif KR', sans-serif;
   box-sizing: border-box;
@@ -69,7 +67,7 @@ footer {background: #2e2e2e;}
 }
 
 .footer-links a:hover {
-  color: #ffd9a6; /* 골드 계열 하이라이트 */
+  color: #ffd9a6; 
   transform: translateX(4px);
 }
 
@@ -80,10 +78,6 @@ footer {background: #2e2e2e;}
   font-size: 0.95rem;
 }
 
-/* .footer-contact a {
-  text-decoration: underline dotted;
-}
- */
 
 
 .footer-family {
@@ -99,7 +93,6 @@ footer {background: #2e2e2e;}
 .footer-family label {
   font-size: 15px;
   margin-bottom: 8px;
-  /* color: #ffbebe; */
 }
 
 .footer-family select {
@@ -116,7 +109,6 @@ footer {background: #2e2e2e;}
 }
 
 .footer-family select:hover {
-  /* border-color: #ffbebe; */
   box-shadow: 0 0 4px rgba(255, 190, 190, 0.6);
 }
 
