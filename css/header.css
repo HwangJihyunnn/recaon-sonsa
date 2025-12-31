@@ -23,6 +23,7 @@
 #header .logo img {
   width: 100%; 
 }
+#header:hover .logo img {filter: brightness(0) invert(58%) sepia(8%) saturate(110%);}
 
 /* 햄버거 버튼 */
 #header .open-btn { 
@@ -70,6 +71,8 @@
   position: absolute; 
   color: #333; 
 }
+
+#header:hover .gnb {color: #fefefe;}
 
 /* 메뉴 공통 */
 #header ul.nav .main-menu > a { 

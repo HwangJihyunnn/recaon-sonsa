@@ -27,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   </head>
   <body>
@@ -44,7 +45,7 @@
       </section>
       <div class="container">
         <h3>"리카온손해사정은 고객의 입장에서 최상의 서비스를 제공하는 손해사정법인입니다."</h3>
-        <div class="com-box">
+        <div class="com-box" data-aos="fade-up" data-aos-duration="1000">
           <ul class="company_info">
             <li>
               <div class="icon material-symbols-outlined">business</div>
@@ -77,7 +78,12 @@
     <div id="footer-placeholder"></div>
     <script src="../js/footer.js"></script>
     <!-- //Footer -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+    <script>
+      AOS.init();
+    </script>
     <script src="../js/history.js"></script>
     <script src="../js/main.js"></script>
     

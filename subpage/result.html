@@ -27,6 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
   </head>
   <body>
@@ -51,7 +53,7 @@
         <section class="performance-section">
           <!-- 섹션 타이틀 -->
           <!-- 상단 비주얼 영역 -->
-          <div class="performance-visual">
+          <div class="performance-visual" data-aos="fade-up" data-aos-duration="1000">
             <div class="graph-box">
               <p class="graph-title">매년 꾸준한 매출 성장</p>
 
@@ -86,7 +88,7 @@
             </div>
           </div>
           <!-- 하단 수치 요약 -->
-          <div class="performance-stats">
+          <div class="performance-stats" data-aos="fade-up" data-aos-duration="1000">
             <div class="stat-card">
               <strong>5년</strong>
               <span>누적 손해사정 기간</span>
@@ -108,7 +110,7 @@
             </div>
           </div>
           <!-- 처리 실적 테이블 -->
-          <div class="performance-table-wrap">
+          <div class="performance-table-wrap" data-aos="fade-up" data-aos-duration="1000">
             <h4 class="table-title">
               최근 5년간 손해사정 처리 실적
               <span>(단위 : 건, %)</span>
@@ -190,8 +192,12 @@
     <div id="footer-placeholder"></div>
     <script src="../js/footer.js"></script>
     <!-- //Footer -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <script src="../js/main.js"></script>
-    
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

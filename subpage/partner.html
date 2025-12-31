@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_downward" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
   </head>
 <body>
@@ -51,7 +53,7 @@
           <p>위탁제안서<span class="material-symbols-outlined">arrow_downward</span></p></a>
         <section class="partners-section">
           <p class="partners-part">보험사</p>
-          <ul class="cli-big">
+          <ul class="cli-big" data-aos="fade-up" data-aos-duration="1000">
             <li><figure class="blg-logo"><img src="../img/partherLogo/농협.jpg" alt="농협손해보험"></figure></li>
             <li><figure class="blg-logo"><img src="../img/partherLogo/삼성.jpg" alt="삼성화재"></figure></li>
             <li><figure class="blg-logo"><img src="../img/partherLogo/롯데2.jpg" alt="롯데손해보험"></figure></li>
@@ -66,7 +68,7 @@
             <li><figure class="blg-logo"><img src="../img/partherLogo/현대해상.png" alt="현대해상"></figure></li>
           </ul>
           <p class="partners-part">공제사</p>
-          <ul class="cli-big">
+          <ul class="cli-big" data-aos="fade-up" data-aos-duration="1000">
             <li><figure class="blg-logo"><img src="../img/partherLogo/개인택시.jpg" alt="개안택시공제조합"></figure></li>
             <li><figure class="blg-logo"><img src="../img/partherLogo/렌터카.jpg" alt="렌터카공제조합"></figure></li>
             <li><figure class="blg-logo"><img src="../img/partherLogo/전국전세버스.png" alt="전국전세버스공제조합"></figure></li>
@@ -83,8 +85,11 @@
     <div id="footer-placeholder"></div>
     <script src="../js/footer.js"></script>
     <!-- //Footer -->
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/history.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

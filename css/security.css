@@ -98,6 +98,7 @@
 
 }
 
+
 .container > h3::before {
   content: "";
   display: inline-block;
@@ -120,6 +121,7 @@
   font-weight: 700;
   margin-bottom: 12px;
   color: #111;
+  margin-top: 100px;
 }
 
 .security-area .section-desc {
@@ -127,6 +129,7 @@
   color: #666;
   line-height: 1.7;
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .security-grid {
@@ -227,11 +230,12 @@
   line-height: 1.8;
   margin-bottom: 60px;
   max-width: 760px;
+  text-align: left;
 }
 
 .admin-layout {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 2fr;
   gap: 60px;
   align-items: center;
 }
