@@ -179,6 +179,7 @@ step-icon:hover {
     text-align: left;
     margin-bottom: 100px;
 }
+.work-text > p {background: #eee; padding: 20px 40px;}
 .work-text > span {
     font-size: 20px;
     font-weight: 700;
